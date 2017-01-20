@@ -1,2 +1,0 @@
-# Practice comppass and jade 
-
