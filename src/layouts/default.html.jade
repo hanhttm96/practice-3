@@ -1,6 +1,8 @@
 - var styles = getBlock('styles')
 - var scripts = getBlock('scripts')
-- styles.add(["/css/main.css"])
+- styles.add(["/scss/main.css"])
+- scripts.add(['/js/jquery.js', '/js/bootstrap.min.js'])
+
 doctype html
 html
   head
@@ -18,3 +20,4 @@ html
     != partial ('header')
     != content
     != partial ('footer')
+    != scripts.toHTML()
