@@ -1,0 +1,35 @@
+section
+  #carousel-example-generic.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#carousel-example-generic', data-slide-to='0')
+      li(data-target='#carousel-example-generic', data-slide-to='1')
+      li(data-target='#carousel-example-generic', data-slide-to='2')
+    // Wrapper for slides
+    .carousel-inner(role='listbox')
+      .item.active
+        img(src='images/bg-slider.jpg', alt='images slider')
+        .carousel-caption
+          .col-md-7
+            h3 amazing theme
+            h2 adelfox is the best
+            p unique and modern design
+          .col-md-5
+            img(src='images/member.png', alt='images slider')
+      .item
+        img(src='images/bg-slider.jpg', alt='images slider')
+        .carousel-caption
+          .col-md-7
+            h3 amazing theme
+            h2 adelfox is the best
+            p unique and modern design
+          .col-md-5
+            img(src='images/member.png', alt='images slider')
+    // Controls
+    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next
+

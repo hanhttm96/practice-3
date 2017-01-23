@@ -1,0 +1,18 @@
+//code here
+.__category {
+    text-transform: capitalize;
+}
+.navbar-brand {
+    font-size: $font-size-h2;
+    font-weight: 300;
+    background-image: url('../../images/main-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: $metric-big;
+    strong {
+        font-weight: 900;
+    }
+}
+.__category {
+    color: $blue-dark;
+}
