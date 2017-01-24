@@ -1,35 +1,55 @@
-section
+- var images = [{imageBg: 'bg-slider.jpg', member: 'member.png'},{imageBg: 'bg-slider.jpg', member: 'member.png'}, {imageBg: 'bg-slider.jpg', member: 'member.png'},{imageBg: 'bg-slider.jpg', member: 'member.png'}]
+- var images_url = ["images/sliders/"]
+section.slider-banner
   #carousel-example-generic.carousel.slide(data-ride='carousel')
     // Indicators
+    .container
     ol.carousel-indicators
-      li.active(data-target='#carousel-example-generic', data-slide-to='0')
-      li(data-target='#carousel-example-generic', data-slide-to='1')
-      li(data-target='#carousel-example-generic', data-slide-to='2')
+      each item, i in images
+        if i == 0
+          li(data-target="#carousel-example-generic", data-slide-to= i).active
+        else
+          li(data-target="#carousel-example-generic", data-slide-to= i)
+
     // Wrapper for slides
     .carousel-inner(role='listbox')
-      .item.active
-        img(src='images/bg-slider.jpg', alt='images slider')
-        .carousel-caption
-          .col-md-7
-            h3 amazing theme
-            h2 adelfox is the best
-            p unique and modern design
-          .col-md-5
-            img(src='images/member.png', alt='images slider')
-      .item
-        img(src='images/bg-slider.jpg', alt='images slider')
-        .carousel-caption
-          .col-md-7
-            h3 amazing theme
-            h2 adelfox is the best
-            p unique and modern design
-          .col-md-5
-            img(src='images/member.png', alt='images slider')
-    // Controls
+      each item, i in images
+        if i == 0
+          .item.active
+            img.img-responsive.img__slider(src= images_url + item.imageBg, alt= item)
+        else
+          .item
+            img.img-responsive.img__slider(src= images_url + item.imageBg, alt= item)
+            // Controls
     a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
       span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
       span.sr-only Previous
     a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
       span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
       span.sr-only Next
-
+  .banner
+    .container
+      .row
+        .col-md-7.col-xs-6
+          .banner__content
+            p.banner__content__amazing amazing theme
+            p.banner__content__best adelfox is the best
+            p.banner__content__design Unique and Modern Design
+          .banner__purchase
+            .btn-group
+              button.btn.banner__purchase__button(type='button')
+                span.icon-cube.btn__icon
+              button.btn.banner__purchase__button(type='button')
+                div.btn.banner__purchase__name--left
+                  p.banner__purchase__title all in one
+                  p.banner__purchase__description Purchase now
+            .btn-group
+              button.btn.banner__purchase__button(type='button')
+                div.btn.banner__purchase__name--right
+                  p.banner__purchase__title live demo
+                  p.banner__purchase__description Exflore now
+                button.btn.banner__purchase__button(type='button')
+                  span.icon-lamp.btn__icon
+        .col-md-5.col-xs-6
+          .member
+            img.img-responsive.img__member(src="images/sliders/member.png", alt="")

@@ -3,6 +3,7 @@ header {
   margin: 0;
   padding: 0;
 }
+
 .header--top {
   padding-top: $metric-small;
   color: $btn-default-border;
@@ -24,6 +25,7 @@ header {
     }
   }
 }
+
 .__sub-level2 {
   padding-left: $metric-large;
   .--list-circle {
