@@ -8,3 +8,16 @@
   font-size: $metric-medium;
   color: $brand-info;
 }
+.section__text--title {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-tiny;
+  text-transform: capitalize;
+}
+.section__text--description {
+  color: $blue-dark;
+  font-weight: $font-weight-small;
+}
+%section-margin {
+  padding: 100px 0;
+  position: relative;
+}

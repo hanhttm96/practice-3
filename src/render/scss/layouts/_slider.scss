@@ -38,16 +38,19 @@
 
 .banner {
   position: absolute;
-  top: 0;
-  margin: 35px 335px;
+  top: $metric-horizontal;
   color: $while-base;
+  margin-left: $padding-large-horizontal;
 }
-
+.btn-group {
+  margin: $metric-tiny;
+}
 .banner__purchase {
   text-align: center;
   .banner__purchase__button {
     background-color: $brand-primary;
     border-color: $btn-default-color;
+    height: $metric-big-custom;
     .btn__icon {
       font-size: $font-size-large;
     }
@@ -73,10 +76,5 @@
     .banner__purchase__name--right {
       text-align: right;
     }
-  }
-}
-.member {
-  .img__member {
-    padding-top: $padding-small-vertical;
   }
 }

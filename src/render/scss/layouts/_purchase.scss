@@ -1,0 +1,115 @@
+.purchase-capt {
+  background-color: $blue-lighter;
+  position: relative;
+  box-sizing: border-box;
+  padding: 60px 0;
+  .btn--purchase {
+    text-transform: uppercase;
+  }
+}
+.purchase-intro {
+  @extend %section-margin;
+}
+.purcahse__box {
+  position: relative;
+  box-shadow: 1px 1px 5px 1px $btn-default-border;
+  text-align: center;
+  padding: 50px $metric-width;
+  &:hover .purchase__box__hexagon &:before &:after{
+    background: $black-base;
+  }
+  &:hover .btn__read-more{
+    background: $black-base;
+  }
+  .purchase__box--around {
+    position: absolute;
+    top: -20px;
+    left: 40%;
+
+  }
+  .btn__read-more {
+    background: $brand-info;
+    position: absolute;
+    bottom: -14px;
+    left: 40%;
+  }
+  .purchase__box__hexagon--border {
+    width: $metric-big;
+    height: $metric-width;
+    background: $blue-lighter;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -$metric-medium;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: $border-trans-medium solid transparent;
+      border-right: $border-trans-medium solid transparent;
+      border-bottom: $metric-medium solid $blue-lighter;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -$metric-medium;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: $border-trans-medium solid transparent;
+      border-right: $border-trans-medium solid transparent;
+      border-top: $metric-medium solid $blue-lighter;
+    }
+
+    .purchase__box__hexagon {
+      width: $metric-big - (10);
+      height: $metric-width - (5);
+      background: $brand-info;
+      position: absolute;
+      z-index: 2;
+      left: 5px;
+      top : 2px;
+      text-align: center;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -$top-small;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: $border-trans-small solid transparent;
+        border-right: $border-trans-small solid transparent;
+        border-bottom: $top-small solid $brand-info;
+        z-index: 2;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -$top-small;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: $border-trans-small solid transparent;
+        border-right: $border-trans-small solid transparent;
+        border-top: $top-small solid $brand-info;
+        z-index: 2;
+      }
+      .box_icon {
+        font-size: $font-size-medium;
+        color: $while-base;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  .purchase__box--description--title {
+    text-transform: capitalize;
+    font-size: $font-size-sixteen;
+  }
+}
+
+.purchase__box--description {
+  padding-top: $padding-xs-horizontal;
+}
