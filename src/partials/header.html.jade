@@ -1,18 +1,18 @@
 -var listContact = [{icon: 'icon-phone_in_talk', title: ' +84 984 827 754'}, {icon: 'icon-social-skype', title: ' mr.crazykv'}]
 header
   div.container
-    ul.header--top
-      li.__contact
+    ul.header-top
+      li.contact
         img(src="images/letter-icon.png", alt="letter icon") 
         |tranmautritam.com
       each item in listContact
-        li.__contact
+        li.contact
           span(class='#{item.icon}')
           = item.title
-      li.__cart 
+      li.cart 
         span.icon-shopping-cart 
         |Cart [
-        span.--total 0
+        span.total 0
         |]item
   nav.navbar.navbar-default
     .container
@@ -30,26 +30,26 @@ header
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
           each item in ['home', 'pages', 'portfilio', 'shop', 'blog', 'shortcodes']
-            li.__category
+            li.category
               a(href='javascript: void(0);')= item
                 span.icon-expand_more
-          li.dropdown.__category
+          li.dropdown.category
             a.dropdown-toggle(href='javascript: void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
               | feature 
               span.icon-expand_more
             ul.dropdown-menu
               li layer slider banner
-                ul.__sub-level2
+                ul.sub-level2
                   each _ in Array(4)
-                    li.--list-circle
+                    li.list-circle
                       a(href='javascript: void(0);')= 'sub menu level 2'
               li.divider(role='separator')
               li feature 2
-                ul.__sub-level2
+                ul.sub-level2
                   each _ in Array(4)
-                    li.--list-circle
+                    li.list-circle
                       a(href='javascript: void(0);')= 'sub menu level 2'
-          li.__category
+          li.category
             a(href='javascript: void(0);')= item
                 span.icon-search
       // /.navbar-collapse

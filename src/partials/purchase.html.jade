@@ -7,18 +7,18 @@ section
           p.section__text--title you will save time and effort!
           p.section__text--description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia inventore voluptas omnis maxime possimus atque sed, saepe pariatur nostrum, fuga quisquam hic. Veritatis, reprehenderit. Aliquam id, ducimus minus delectus laboriosam.
         .col-md-3
-          button.btn.btn-primary.btn-lg.btn--purchase(type='button') purchse now
+          button.btn.btn-primary.btn-lg.c__btn--purchase(type='button') purchse now
   .purchase-intro
     .container
       .row
         each item in purchaseTitle
           .col-md-4
             .purcahse__box
-              .purchase__box--around
-                .purchase__box__hexagon--border
-                  .purchase__box__hexagon
+              .around
+                .hexagon-border
+                  .hexagon
                     span.box_icon(class='#{item.icon}')
-              .purchase__box--description
-                p.purchase__box--description--title= item.title 
-                p.section__text--description Fusce gravida tortor felis <br>Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies
+              .description
+                p.description-title= item.title 
+                p.stext-description Fusce gravida tortor felis <br>Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies
               button.btn.btn-info.btn-sm.btn__read-more(type='button') read more

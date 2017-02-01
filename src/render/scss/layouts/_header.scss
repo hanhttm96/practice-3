@@ -4,22 +4,22 @@ header {
   padding: 0;
 }
 
-.header--top {
-  padding-top: $metric-small;
+.header-top {
+  padding: $metric-small 0 0 0;
   color: $btn-default-border;
-  .__contact {
+  .contact {
     @extend %li-inline-none;
     margin-right: $metric-medium;
     span {
       @extend %icon-style;
     }
   }
-  .__cart {
+  .cart {
     @extend %li-inline-none;
     float: right;
     span {
       @extend %icon-style;
-      .--total {
+      .total {
         font-size: $font-size-base !important;
       }
     }

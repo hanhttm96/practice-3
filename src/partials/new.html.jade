@@ -1,0 +1,18 @@
+-var desNew = ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto adipisci, praesentium.'
+-var listNew= [{day: '16', title: 'Lorem ipsum dolor sit amet.'}, {day: '18', title: 'Lorem ipsum dolor sit amet.'}, {day: '21', title: 'Lorem ipsum dolor sit amet.'}, {day: '26', title: 'Lorem ipsum dolor sit amet.'}, {day: '27', title: 'Lorem ipsum dolor sit amet.'}, {day: '30', title: 'Lorem ipsum dolor sit amet.'}]
+section.new
+  .container
+    .row
+      .new-intro
+        p.section__text--title breaking news
+        p.section__text--description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vel porro animi quas commodi, possimus!
+    .row
+      each item in listNew
+        .col-md-4
+          .media
+            .media-left
+              .splan
+                .day= item.day
+            .media-body
+              h4.media-heading= item.title
+              p.section__text--description= desNew

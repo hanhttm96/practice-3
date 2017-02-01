@@ -3,7 +3,7 @@
   position: relative;
   box-sizing: border-box;
   padding: 60px 0;
-  .btn--purchase {
+  .c__btn--purchase {
     text-transform: uppercase;
   }
 }
@@ -15,13 +15,13 @@
   box-shadow: 1px 1px 5px 1px $btn-default-border;
   text-align: center;
   padding: 50px $metric-width;
-  &:hover .purchase__box__hexagon &:before &:after{
+  &:hover .hexagon &:before &:after{
     background: $black-base;
   }
   &:hover .btn__read-more{
     background: $black-base;
   }
-  .purchase__box--around {
+  .around {
     position: absolute;
     top: -20px;
     left: 40%;
@@ -33,7 +33,7 @@
     bottom: -14px;
     left: 40%;
   }
-  .purchase__box__hexagon--border {
+  .hexagon-border {
     width: $metric-big;
     height: $metric-width;
     background: $blue-lighter;
@@ -62,7 +62,7 @@
       border-top: $metric-medium solid $blue-lighter;
     }
 
-    .purchase__box__hexagon {
+    .hexagon {
       width: $metric-big - (10);
       height: $metric-width - (5);
       background: $brand-info;
@@ -104,12 +104,12 @@
     }
   }
 
-  .purchase__box--description--title {
+  .description-title {
     text-transform: capitalize;
     font-size: $font-size-sixteen;
   }
 }
 
-.purchase__box--description {
+.description {
   padding-top: $padding-xs-horizontal;
 }
