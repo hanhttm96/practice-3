@@ -1,0 +1,52 @@
+.about-us {
+  text-align: center;
+  @extend %section-margin;
+  .profile {
+    background-color: $blue-light;
+    border-radius: 50%;
+    @include rectangle (80px, 80px);
+  }
+  .media-body {
+    text-align: left;
+    .social {
+      list-style: none;
+      padding: 0;
+      .social__icon {
+        display: inline-block;
+        background-color: $blue-light;
+        margin: $padding-xs-horizontal;
+        padding: $padding-xs-horizontal;
+        a {
+          color: $while-base;
+        }
+      }
+    }
+    .rate {
+      list-style: none;
+      padding: 0;
+      .rate__icon {
+        display: inline-block;
+        font-size: $font-size-sixteen;
+        a {
+          color: $color-info;
+        }
+        &:last-child a {
+          color: $gray-lighter;
+        }
+      }
+    }
+  }
+  .logo-us {
+    display: inline-block;
+    list-style: none;
+    width: 32%;
+    margin: $metric-small 0;
+    .logo-effect {
+      filter: grayscale(100%);
+      cursor: pointer;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

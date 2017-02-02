@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+body {
+  font-family: $font-main;
+  font-size: $font-size-main;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none
+  }
+}
+
+.nav {
+  float: right;
+}
+
+.navbar-default {
+  background-color:$while-base;
+  border-color: $gray-lighter; 
+  box-shadow: 1px 1px 5px 1px $gray-lighter;
+  border-radius: 0;
+  padding: $metric-medium 0;
+  margin:0;
+}
+
+.navbar-default .navbar-brand {
+  color: $blue-dark;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: $metric-large;
+}
+
+.media-heading {
+  text-transform: capitalize;
+}
