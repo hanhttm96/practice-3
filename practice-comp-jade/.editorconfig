@@ -1,0 +1,15 @@
+
+root = true
+[*.{css,html}]
+charset = utf-8
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = space
+
+[lib/**.html]
+indent_style = space
+indent_size = 2
+
+[lib/**.css, .scss]
+indent_style = space
+indent_size = 2

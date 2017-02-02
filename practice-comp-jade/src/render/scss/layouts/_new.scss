@@ -1,0 +1,27 @@
+.new {
+  background-color: $blue-lighter;
+  @extend %section-margin;
+  .media {
+    margin: $margin-medium 0;
+    .splan {
+      background: $blue-light;
+      box-sizing: border-box;
+      border-top: solid 5px $color-info;
+      @include rectangle(140px,140px);
+    }
+    .day {
+      background: $color-info;
+      @include rectangle(50px,50px);
+      margin-left: $metric-small;
+      text-align: center;
+      color: $while-base;
+      .day-number {
+        font-size: $font-size-h2;
+        margin-top: -$top-small;
+      }
+    }
+  }
+  .new-intro {
+    text-align: center;
+  }
+}

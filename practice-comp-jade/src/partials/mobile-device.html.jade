@@ -1,0 +1,20 @@
+-var displayMobile= [{img: 'icon-brain.png', title: 'smart display'}, {img: 'icon-camera.png', title: 'user friendly interface'}, {img: 'icon-droplet.png', title: 'chage flexiblity'}]
+-var urlMobile= ['images/']
+-var desMoblie= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+section.container
+  .row
+    .col-md-6
+      .image-mobile
+    .col-md-6
+      p.section__text--title great display on mobile devices
+      each item in displayMobile
+        .media
+          .media-left
+            a(href='javascript: void(0);')
+              img.media-object(src= urlMobile + item.img, alt= item)
+          .media-body
+            h4.media-heading= item.title
+            p.section__text--description= desMoblie
+      button.btn.c__btn--learn-more(type='button') Learn more
+      button.btn.c__btn--purchase-new(type='button') Purchase now
+      

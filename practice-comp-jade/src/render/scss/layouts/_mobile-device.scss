@@ -1,0 +1,6 @@
+.image-mobile {
+	background-image: url('/images/bg-ip5.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include rectangle (100%, 520px);
+}

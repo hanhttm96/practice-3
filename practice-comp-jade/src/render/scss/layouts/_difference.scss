@@ -1,0 +1,13 @@
+.difference {
+  background-image: url('../images/bg-diffrence.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  @extend %section-margin;
+  .section__text--title {
+    color: $while-base;
+  }
+  .section__text--description {
+    color: $while-base;
+  }
+}

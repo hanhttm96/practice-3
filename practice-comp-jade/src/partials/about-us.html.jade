@@ -1,0 +1,33 @@
+-var urlImage = [{image: 'logo-opensuse.png',imghover: 'hv-logo-opensuse.png'}, {image: 'logo-brilliant.png',imghover: 'hv-logo-brilliant.png'}, {image: 'logo-nuride.png',imghover: 'hv-logo-nuride.png'}, {image: 'logo-techcombank.png',imghover: 'hv-logo-techcombank.png'}, {image: 'logo-color.png',imghover: 'hv-logo-color.png'}, {image: 'logo-livefyre.png',imghover: 'hv-logo-livefyre.png'}]
+-var urlLogo = ['images/']
+section.about-us.container
+  .row
+    .col-md-3
+    .col-md-6
+      p.section__text--title what people say about us
+      p.section__text--description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iste repellat consectetur tenetur deserunt aut consequatur, voluptatum at rerum, aliquam!
+    .col-md-3
+  .row
+    .col-md-6
+      .media
+        .media-left
+          .profile
+        .media-body
+          h4.media-heading John Doe
+          p.section__text--description October 26,2014
+          hr
+          p.section__text--description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim dolores veniam blanditiis nostrum ipsum tempore quo quisquam laborum delectus, doloribus numquam maxime deleniti quas.
+          ul.social
+            each icon in ['icon-social-facebook', 'icon-twitter', 'icon-pinterest', 'icon-tumblr']
+              li.social__icon
+                span(class='#{icon}')
+          ul.rate
+            each _ in Array(5)
+              li.rate__icon
+                span.icon-star
+    .col-md-6
+      ul
+        each item in urlImage
+          li.logo-us
+            img.img-us(src= urlLogo + item.image, alt= item)
+            img.img-hover(src= urlLogo + item.imghover, alt= item)
