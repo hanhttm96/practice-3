@@ -14,7 +14,7 @@ button {
 
 .c__btn--margin {
   margin: $margin-small $padding-xs-horizontal;
-  @include rectangle (140px, 40px);
+  @include size (140px, 40px);
 }
 
 .c__btn--learn-more {

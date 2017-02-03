@@ -4,7 +4,7 @@
   .profile {
     background-color: $blue-light;
     border-radius: 50%;
-    @include rectangle (80px, 80px);
+    @include square (80px);
   }
   .media-body {
     text-align: left;

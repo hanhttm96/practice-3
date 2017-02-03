@@ -1,6 +1,7 @@
-
+@import "../../vendor/compass-sass-mixins/lib/compass";
+@import "../../vendor/sass/styles";
 @import "base/base";
-@import "vendor/style";//style icon
+@import "../../vendor/style";//style icon
 @import 'variables/all';
 @import 'abstracts/all';
 @import 'components/all';

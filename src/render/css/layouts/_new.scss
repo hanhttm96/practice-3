@@ -7,11 +7,11 @@
       background: $blue-light;
       box-sizing: border-box;
       border-top: solid 5px $color-info;
-      @include rectangle(140px,140px);
+      @include square(140px);
     }
     .day {
       background: $color-info;
-      @include rectangle(50px,50px);
+      @include square(50px);
       margin-left: $metric-small;
       text-align: center;
       color: $while-base;

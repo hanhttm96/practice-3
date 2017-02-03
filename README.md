@@ -1,5 +1,4 @@
 # Practice comppass and jade 
-# Practice 03
 
 ### Frontend Frameworks
 
@@ -49,7 +48,7 @@
 * Open link on browsers: http://locahost:8888
 
 **src**
-# Make docpad project with jade and sass
+## Make docpad project with jade and sass
 > Font
 
 - 'Lato', sans-serif;

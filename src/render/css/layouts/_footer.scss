@@ -1,1 +1,59 @@
 
+footer {
+  
+  .footer-top {
+    position: relative;
+    background-color: $color-primary;
+    border-bottom: 1.5px solid $color-primary-light;
+  }
+
+  .navSocial {
+    overflow: hidden;
+    padding: $metric-large;
+    li {
+      float: left;
+      width: 8.1%;
+      display: flex;
+      justify-content: center;
+        
+      a {
+        @include sprite-background('/images/icon-footer.png');
+        display: block;
+        @include square(30px);
+      }
+
+      @for $i from 1 through 12 {
+        .icon#{$i} {
+          @include sprite-column($i, 30px, 0);
+        }
+      }
+    }
+  }
+  .footer-content {
+    background-color: $color-primary;
+    color: $blue-dark;
+    @extend .navSocial;
+    @include clearfix;
+    a {
+      color: $blue-dark;
+    }
+
+    .object {
+      text-transform: capitalize;
+    }
+
+    .post__img {
+      @include square(55px);
+      background-color: $gray-lighter;
+    }
+
+    .item-tag {
+      text-transform: capitalize;
+      background-color: $color-primary-darken;
+      margin: $padding-xs-horizontal;
+      padding: $metric-tiny $metric-small;
+      display: inline-block;
+    }
+  }
+}
+

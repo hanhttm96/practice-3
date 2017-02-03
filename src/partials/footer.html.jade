@@ -1,8 +1,38 @@
-footer.container
-	.row
-		.footer-top
-			p http://www.w3schools.com/css/tryit.asp?filename=trycss_sprites_nav
-	.row
-		.footer-content
-	.row
-		.footer-bottom
+-var lorem7 = 'Lorem ipsum dolor sit amet, consectetur adipisicing. '
+footer
+  .footer-top
+    .container
+      .row
+        ul.navSocial
+          - for (var i=1; i<13; i++) {
+            li
+              a(href="javascript: void(0);", class= 'icon' + i)
+          - }
+  .footer-content
+    .container
+      .row
+        .col-md-3
+          h2 
+            a.navbar-brand(href='javascript: void(0);') adel
+              strong fox
+          p.clearfix= lorem7
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa laboriosam aperiam sed nemo nam nesciunt porro accusantium impedit corrupti quibusdam! 
+          a(href="javascript: (void:0);")
+            | LEAR MORE 
+        .col-md-3
+          p.object recent post
+          - for (var i=1; i<4; i++) {
+            .media
+              .media-left
+                .post__img
+              .media-body
+                p= lorem7
+                p.section__text--description October 15, 2013
+          - }
+        .col-md-3
+          p.object tags
+          each tags in ['awesome','photography', 'wed design', 'infographic', 'guitar', 'theme', 'website', 'artist design', 'themeforest','music']
+            span.item-tag= tags
+        .col-md-3
+  .footer-bottom
+    .row

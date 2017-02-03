@@ -1,20 +1,36 @@
 //code here
-.__category {
-    text-transform: capitalize;
+.nav__category {
+  color: $blue-dark;
+  text-transform: capitalize;
+  .group-menu {
+     width: 400px;
+     padding: 0;
+     background-color: $blue-lighter;
+     box-shadow: 1px 1px 5px 1px #ccc;
+     border: none;
+     .sub-level2 {
+       border-left: solid 1px $while-base;
+       .list-circle {
+         list-style-type: disc;
+         a {
+           color: $blue-light;
+           &:hover {
+             color: $color-info;
+           }
+         }
+       }
+     }
+  }
 }
 
 .navbar-brand {
-    font-size: $font-size-base;
-    font-weight: 300;
-    background-image: url('../../images/main-logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-left: $metric-big;
-    strong {
-        font-weight: 900;
-    }
-}
-
-.__category {
-    color: $blue-dark;
+  font-size: $font-size-base;
+  font-weight: 300;
+  background-image: url('../../images/main-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: $metric-big;
+  strong {
+    font-weight: 900;
+  }
 }

@@ -30,25 +30,27 @@ header
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
           each item in ['home', 'pages', 'portfilio', 'shop', 'blog', 'shortcodes']
-            li.category
+            li.nav__category
               a(href='javascript: void(0);')= item
                 span.icon-expand_more
-          li.dropdown.category
+          li.dropdown.nav__category
             a.dropdown-toggle(href='javascript: void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
               | feature 
               span.icon-expand_more
-            ul.dropdown-menu
-              li layer slider banner
-                ul.sub-level2
-                  each _ in Array(4)
-                    li.list-circle
-                      a(href='javascript: void(0);')= 'sub menu level 2'
-              li.divider(role='separator')
-              li feature 2
-                ul.sub-level2
-                  each _ in Array(4)
-                    li.list-circle
-                      a(href='javascript: void(0);')= 'sub menu level 2'
+            .dropdown-menu.group-menu(aria-labelledby='dropdownMenuButton')
+              .row
+                .col-md-6
+                  ul.sub-level2
+                    p layer slider banner
+                    each _ in Array(4)
+                      li.list-circle
+                        a(href='javascript: void(0);')= 'sub menu level 2'
+                .col-md-6
+                  ul.sub-level2
+                    p feature 2
+                    each _ in Array(4)
+                      li.list-circle
+                        a(href='javascript: void(0);')= 'sub menu level 2'
           li.category
             a(href='javascript: void(0);')= item
                 span.icon-search
