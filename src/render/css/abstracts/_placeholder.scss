@@ -9,13 +9,20 @@
   color: $color-info;
 }
 .section__text--title {
-  font-size: $font-size-h2;
+  font-size: $font-h2;
   font-weight: $font-weight-tiny;
   text-transform: capitalize;
 }
 .section__text--description {
   color: $blue-dark;
   font-weight: $font-weight-small;
+}
+.text__a--custom {
+  color: $blue-dark;
+}
+.logo__text {
+  color: $blue-dark;
+  font-size: $font-size-h1;
 }
 %section-margin {
   padding: 100px 0;

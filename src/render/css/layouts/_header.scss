@@ -19,8 +19,8 @@ header {
     float: right;
     span {
       @extend %icon-style;
-      .total {
-        font-size: $font-size-base !important;
+      &.total {
+        font-size: $font-size-main !important;
       }
     }
   }
