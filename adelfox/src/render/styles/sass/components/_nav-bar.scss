@@ -1,0 +1,40 @@
+
+// responsive style for nav-bar on mobile
+.header-page {
+  margin: 20px 0 0;
+  
+  .navbar-main {
+    margin-bottom: 0;
+
+    @include color-style(transparent, transparent);
+
+    .menu {
+      margin-top: 12px;
+      margin-right: 5px;
+      padding: 7px 6px;
+    }
+  }
+}
+
+
+.dropdown {
+  color: $gray-dark;
+}
+
+.navbar__logo {
+  padding: 0;
+}
+
+
+.dropdown-border {
+  border-bottom: 1px solid $gray-light;
+}
+
+.navbar-container {
+  background-color: transparent;
+  padding: $padding-base-vertical 0;
+}
+
+.dropdown-icon {
+  margin-top: 5px;
+}

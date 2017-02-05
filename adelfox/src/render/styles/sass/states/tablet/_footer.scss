@@ -1,0 +1,19 @@
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .footer {
+    .footer-nav {
+      &__list {
+        .nav-list__items {
+          width: 11.1%;
+
+          @for $i from 1 through 12 {
+            @if $i == 12 or $i == 1 or $i == 11 {
+              .icon#{$i} {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

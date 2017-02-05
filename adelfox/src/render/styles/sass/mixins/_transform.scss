@@ -1,0 +1,27 @@
+/* Transform Y */
+
+@mixin transform-y($y) {
+  -webkit-transform: translateY($y);
+     -moz-transform: translateY($y);
+      -ms-transform: translateY($y);
+       -o-transform: translateY($y);
+          transform: translateY($y);
+}
+
+/* Transform X */
+@mixin transform-x($x) {
+  -webkit-transform: translateX($x);
+     -moz-transform: translateX($x);
+      -ms-transform: translateX($x);
+       -o-transform: translateX($x);
+          transform: translateX($x);
+}
+
+/* Transform X Y */
+@mixin transform-xy($x, $y) {
+  -webkit-transform: translate($x, $y);
+     -moz-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}

@@ -1,0 +1,9 @@
+// responsive style for customer-feedback on desktop
+@media screen and (min-width: $screen-md) {
+  .customer {
+    .customer-intro__detail {
+      width: 50%;
+    }
+  }
+}
+

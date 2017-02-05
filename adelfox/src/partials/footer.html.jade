@@ -1,0 +1,44 @@
+//- include mixins and variables for footer part
+include mixins/footer_mixins.html.jade
+
+footer.footer
+  nav.nav.footer-nav
+    .container.footer-container
+      ul.footer-nav__list.nav-list
+        - for (var i = 1; i < 13; i++) {
+          li.nav-list__items: a(href= "javascript: void(0);", class="icon" + i)
+        - }
+  .footer-content.row
+    .container
+      .footer-content__intro.content.col-md-3.col-xs-12
+        img(src= "images/logo/logo.png")
+        p.content-detail= content
+        a(href="javascript: void(0);") read more
+      .footer-content__recent.col-md-3.col-xs-12
+        h5.footer-title recent post
+        - for (var i = 0; i < 3; i++) {
+          .media.recent-post.col-xs-12.col-sm-4.col-md-12
+            .media-left.media-middle.image-post
+              a(href='javascript: void(0);')
+                img.media-object(src='images/footer/mountain.png', alt='mountain.png')
+            .media-body
+              h6.recent-post__title.media-heading Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              p.recent-post__date October 15,2013
+        - }
+      .footer-content__tag.col-md-3.col-xs-12
+        h5.footer-title tags
+        .tags
+          each item in tags
+            a(href="javascript: void(0);")= item
+      .footer-content__widget.col-md-3.col-sm-12
+        h5.footer-title flickr widget
+        ul.widget-list
+          - for (var i = 0; i < 6; ++i) {
+            li.widget-list__items
+          - }
+  nav.nav.footer-menu.col-md-12
+    .container
+      p.copy-right.col-md-4.col-xs-12 copyright &#169; 2013 &#45; Designed by tranmautritam
+      ul.footer-menu__list.menu-list.desktop
+        each item in footer_menu
+          li.menu-list__items: a(href="javascript: void(0);")= item

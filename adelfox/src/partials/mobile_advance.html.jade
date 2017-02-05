@@ -1,0 +1,28 @@
+//- include mixins and variables for mobiles advance part
+include mixins/mobile_advance_mixins.html.jade
+
+section.mobile-advance
+  .container.mobile-container
+    .col-xs-12.col-sm-6.col-sm-push-6
+      .mobile-intro
+        .mobile-intro__title
+          p Greate display on mobile devices
+        .mobile-intro__description.description
+          each advance in advances
+            .media
+              .media-left
+                .description-hexagon
+                  img.filter(src= image_url + "hexagon-border-blue.png", alt="hexagon-border-logo.png")
+                  span.media-object.description-hexagon__icon(class= advance.icon)
+              .media-body
+                .description-detail
+                  .media-heading
+                    .description-detail__title
+                      p= advance.title
+                  .description-detail__message
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam maiores, eum! Enim, consequatur odio. 
+      .mobile-intro__button
+        button.mobile-button Learn more
+        button.mobile-button Purchase now
+    .col-xs-12.col-sm-6.col-sm-pull-6
+      .mobile-illustration

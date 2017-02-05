@@ -1,0 +1,13 @@
+//- content for capability content
+- var content =  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequuntur ullam fugiat, architecto quas quis aperiam alias illum enim ipsa"
+
+mixin capabilities(title, content, percent)
+  li.list__items.chart.col-xs-12.col-sm-3
+    .c100.p65.big.chart--circle
+      span 65%
+      .slice
+        .bar
+        .fill
+    .chart__detail
+      h5.chart__title: a(href="javascript: void(0);")= title
+      p.chart__content= content

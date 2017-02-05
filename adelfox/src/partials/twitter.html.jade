@@ -1,0 +1,47 @@
+//- include mixins and variables for twitter part
+include mixins/twitter_mixins.html.jade
+
+section.twitter.slide-banner
+  #twitter-slide.carousel.desktop.slide(data-ride="carousel")
+    .carousel-inner.slide-inner(role="listbox")
+      each item, i in images
+        if i == 1
+          .item.active.slide-inner__items
+            img(src= images_url + item, alt= item)
+        else
+          .item.slide-inner__items
+            img(src= images_url + item, alt= item)
+    ol.carousel-indicators.twitter-indicators
+        each item, i in images
+          if i == 0
+            li(data-target="#twitter-slide", data-slide-to= i).active
+          else
+            li(data-target="#twitter-slide", data-slide-to= i)
+  // Display for mobile
+  #twitter-slide.carousel.mobile.slide(data-ride="carousel")
+    .carousel-inner.slide-inner(role="listbox")
+      each item, i in images_mobile
+        if i == 1
+          .item.active.slide-inner__items
+            img(src= images_url + item, alt= item)
+        else
+          .item.slide-inner__items
+            img(src= images_url + item, alt= item)
+  // Display for tablet
+  #twitter-slide.carousel.tablet.slide(data-ride="carousel")
+    .carousel-inner.slide-inner(role="listbox")
+      each item, i in images_tablet
+        if i == 1
+          .item.active.slide-inner__items
+            img(src= images_url + item, alt= item)
+        else
+          .item.slide-inner__items
+            img(src= images_url + item, alt= item)
+
+  .container.slide-banner__content
+    .twitter-banner.banner-content
+      span.icon-twitter.twitter-icon
+      h4.banner-content__title New Tweets
+      p.banner-content__description.twitter-content
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora deleniti modi quibusdam et, asperiores quas eum pariatur. Aperiam tenetur dolores odio, accusamus quis ab nobis deleniti commodi veniam distinctio pariatur.    
+      .banner-button.btn.twitter-button--follow follow us

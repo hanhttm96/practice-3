@@ -1,0 +1,20 @@
+@mixin button-style($color, $background, $border, $color-hover, $background-color-hover, $border-color-hover, $color-focus, $background-color-focus, $border-color-focus) {
+  cursor: pointer;
+
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+  
+  &:focus,
+  &.focus {
+    color: $color-hover;
+    border-color: $border-color-focus;
+    background-color: $background-color-focus;
+  }
+
+  &:hover {
+    color: $color-focus;
+    border-color: $border-color-hover;
+    background-color: $background-color-hover;
+  }
+}

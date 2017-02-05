@@ -1,0 +1,30 @@
+// responsive style for customer-feedback on mobile
+@media only screen and (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .customer {
+    .customer-intro__detail {
+      width: 70%;
+    }
+
+    .customer-feedback {
+      text-align: center;
+
+      &__avatar {
+        display: block;
+      }
+
+      .display-position {
+        display: block;
+      }
+    }
+
+    .customer-logo {
+      margin-top: 40px;
+      text-align: center;
+
+      .logo {
+        padding-left: 0;
+      }
+    }
+  }
+}
+

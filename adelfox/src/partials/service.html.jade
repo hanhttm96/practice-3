@@ -1,0 +1,27 @@
+//- include mixins and variables for service part
+include mixins/service_mixins.html.jade
+
+section.service
+  .container
+    .arcodition.col-xs-12.col-md-6
+      h4.arcodition__title why adelfox?
+      p.arcodition__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolor minus harum, expedita similique beatae laudantium
+      #accordion.arcodition-list.panel-group(role='tablist', aria-multiselectable='true')
+        + arcodition_list_items("Our Solution", "content_one", "true")
+        + arcodition_list_items("Our Technology", "content_two", "false")
+        + arcodition_list_items("Our Mission", "content_there", "false")
+        + arcodition_list_items("Our Vision", "content_four", "false")
+
+    .service__detail.col-xs-12.col-md-6
+      h4.service__title our services
+      p.service__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero explicabo consequuntur facere recusandae modi odio cumque eligendi molestias
+      // Nav tabs
+      ul.service-list.nav.nav-tabs(role='tablist')
+        + service_menu("web-design", "active")
+        + service_menu("marketing")
+        + service_menu("art-photo")
+      // Tab panes
+      .tab-content.service-detail
+        + service_content("web-design", "active")
+        + service_content("marketing")
+        + service_content("art-photo")

@@ -1,0 +1,155 @@
+.slide-banner {
+  position: relative;
+
+  min-height: 200px;
+  padding: 0;
+
+  img {
+    min-height: 200px;
+  }
+}
+
+.slide {
+  .slide-indicators {
+    bottom: 0;
+
+    margin-bottom: 0;
+
+    text-align: center;
+
+    .active {
+      background-color: $brand-info;
+    }
+
+    li {
+      background-color: $base-color;
+    }
+  }
+
+  .slide-control {
+    position: absolute;
+    z-index: 2; //display heigher than banner
+    top: 50%;
+
+    @include square(30px);
+    margin-top: -15px;
+
+    color: $base-color;
+    background: rgba(0, 0, 0, .3);
+ 
+    .slide-control__button,
+    .icon-prev,
+    .icon-next {
+      font-size: 15px;
+
+      @extend .center-position;
+    }
+
+    &:nth-child(odd) {
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+    }
+
+    &:nth-child(even) {
+      border-top-left-radius: $border-radius-base;
+      border-bottom-left-radius: $border-radius-base;
+    }
+  }
+
+  .slide-inner {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+
+  text-align: center;
+
+  @include transform-xy(20px, -50%);
+
+  .banner-content {
+    color: $base-color;
+
+    &__amazing {
+      @include base-text-style(10px, $regular, 18px);
+    }
+
+    &__best {
+      text-transform: uppercase;
+
+      @include base-text-style(16px, $bold, 18px);
+    }
+
+    &__design {
+      @include base-text-style(11px, $regular, 11px);
+    }
+  }
+
+  .purchase {
+    .purchase-button {
+      display: block;
+      overflow: hidden;
+
+      padding: 2px;
+
+      color: $base-color;
+
+      &__icon,
+      &__name {
+        float: inherit;
+
+        padding: 7px;
+
+        background-color: $gray-darker;
+      }
+
+      &__icon {
+        font-size: 10px;
+
+        &:nth-child(odd) {
+          color: $brand-info;
+          border-right: 2px solid $gray-darkest;
+        }
+
+        &:nth-child(even) {
+          color: #a0fc1c;
+          border-left: 1px solid $gray-darkest;
+        }
+      }
+
+      .button-content {
+        line-height: 7px;
+
+        margin-left: -4px;
+
+        &:nth-child(odd) {
+          text-align: left;
+        }
+
+        &:nth-child(even) {
+          text-align: right;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        &__title {
+          font-size: 8px;
+          font-weight: $bold;
+
+          text-transform: uppercase;
+        }
+
+        &__description {
+          font-size: 6px;
+          font-weight: $regular;
+        }
+      }
+    }
+  }
+}

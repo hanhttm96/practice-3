@@ -1,0 +1,21 @@
+@media screen and (min-width: $screen-md) {
+  .core-feature {
+    min-height: inherit;
+
+    &__control {
+      display: block;
+
+      &--left,
+      &--right {
+        display: block;
+      }
+    }
+  }
+
+  .slide-banner {
+    &__content {
+      width: $screen-md;
+      text-align: left;
+    }
+  }
+}

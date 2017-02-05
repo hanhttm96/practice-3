@@ -1,0 +1,45 @@
+.features-summary {
+  .features-summary-content {
+    .features-summary__title {
+      @include text-style($font-size-text-extra, $light, unquote($line-height-large + 'px'), $text-title, none,none);
+    }
+    
+    .features-summary__intro {
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      @include text-style($font-size-text-base,$regular, unquote($line-height-small + 'px'), $text-description, none,none);
+    }
+
+    .features-summary__list {
+      .list__features {
+        &--column {
+          padding-left: 0;
+
+          list-style-type: none;
+          .list-icon {
+            padding-right: $padding-base-horizontal;
+
+            color: $brand-info;
+          }
+          .list_features--style {
+            @include text-style($font-size-text-base,$regular, unquote($line-height-medium + 'px'), $text-description, none,none);
+          }
+        }
+      }
+    }
+
+    .features-summary__button {
+      .purchase-button {
+        margin-top: 20px;
+
+        border: 1px solid;
+        outline: none;
+
+        @include button-size($padding-small-vertical, $padding-larger-horizontal, $font-size-btn, $line-height-small, $border-radius-btn) ;
+        @include button-style($base-color, $brand-primary, $brand-primary, $base-color, $gray-darker, $gray-darker, $base-color, $brand-info, $brand-info );
+        @include text-style($font-size-text-medium, $regular, unquote($line-height-small + 'px') , $base-color, uppercase,none);
+      }
+    }
+  }
+}

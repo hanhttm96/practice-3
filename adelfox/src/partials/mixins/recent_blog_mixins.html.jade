@@ -1,0 +1,15 @@
+- var url_image = "images/blogs/"
+- var content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptates. Fugiat autem nam debitis,"
+//- Mixin for blog
+mixin news(title, url_image, image, content)
+  li.news.media.col-xs-12.col-sm-6.col-md-4
+      .media-left.media-middle.news-image
+        a(href="javascript: void(0);")
+          img(src= url_image + image, alt= image).media-object
+        .news-time
+          span.news-time__line
+          a(href="javascript: void(0);") oct
+            span 26
+      .media-body.news-body
+        h5.media-heading.news-body__title: a(href="javascript: void(0);")= title
+        p.media-description.news-body__description= content

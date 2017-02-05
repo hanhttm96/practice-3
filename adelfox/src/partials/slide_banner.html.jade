@@ -1,0 +1,42 @@
+//- include mixins and variables for slide_banner part
+include mixins/slide_banner_mixins.html.jade
+
+section.slide-banner
+  #slide-banner.carousel.slide(data-ride="carousel")
+    .container.carousel-container
+      ol.carousel-indicators.slide-indicators
+        each item, i in images
+          if i == 0
+            li(data-target="#slide-banner", data-slide-to= i).active
+          else
+            li(data-target="#slide-banner", data-slide-to= i)
+    .carousel-inner.slide-inner(role="listbox")
+      each item, i in images
+        if i == 0
+          .item.active.slide-inner__items
+            img(src= images_url + item, alt= item)
+        else
+          .item.slide-inner__items
+            img(src= images_url + item, alt= item)
+    a.left.slide-control.carousel-control(href="#slide-banner", role="button", data-slide="prev")
+      span.slide-control__button.glyphicon.glyphicon-chevron-left
+      span.sr-only Previous
+    a.right.slide-control.carousel-control(href="#slide-banner", role="button", data-slide="next")
+      span.slide-control__button.glyphicon.glyphicon-chevron-right
+      span.sr-only Next
+  .banner.container
+      .banner-content
+        p.banner-content__amazing amazing theme
+        p.banner-content__best adelfox is the best
+        p.banner-content__design Unique and Modern Design
+      .banner-purchase.purchase
+        .btn-group.purchase-button
+          span.icon-box.btn.purchase-button__icon
+          div.btn.purchase-button__name.button-content
+            p.button-content__title all in one
+            p.button-content__description Purchase now
+        .btn-group.purchase-button
+          div.btn.purchase-button__name.button-content
+            p.button-content__title live demo
+            p.button-content__description Exflore now
+          span.icon-bulb.btn.purchase-button__icon

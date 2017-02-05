@@ -1,0 +1,38 @@
+//- include mixins and variables for responsive part
+include mixins/responsive_mixins.html.jade
+
+section.features-summary
+  .container.features-summary-container
+    .tablet-display
+      .features-summary-tablet
+        .features-tablet__title
+          p Are you ready to enjoy?
+        .features-tablet__intro
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quis, distinctio expedita tenetur officia dolorum amet praesentium consectetur et dignissimos repellat fugiat laboriosam in commodi aliquid reprehenderit voluptatem quae illum!
+    .row
+      .col-xs-12.col-sm-6
+        .features-summary__illustration
+      .col-xs-12.col-sm-6
+        .features-summary-content
+          .features-summary__title
+            p Are you ready to enjoy?
+          .features-summary__intro
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quis, distinctio expedita tenetur officia dolorum amet praesentium consectetur et dignissimos repellat fugiat laboriosam in commodi aliquid reprehenderit voluptatem quae illum!
+          .features-summary__list.list__features
+            .row
+              .col-xs-12.col-sm-6.list__features--wrap
+                ul.list__features--column
+                  each feature_left in list_features_left
+                    li 
+                      span.icon-circle-down.list-icon
+                      span.list_features--style= feature_left
+              .col-xs-12.col-sm-6.list__features--wrap
+                ul.list__features--column
+                  each features_right in list_features_right
+                    li 
+                      span.icon-circle-down.list-icon
+                      span.list_features--style= features_right
+          .features-summary__button
+            button.purchase-button Purchase Now
+
+

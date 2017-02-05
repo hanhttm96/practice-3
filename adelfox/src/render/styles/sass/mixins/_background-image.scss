@@ -1,0 +1,9 @@
+@mixin background-image ($name,$bg_height, $bg_width, $size: 100% 100%, $position:bottom center, $repeat:no-repeat) {
+  width: $bg_width;
+  height: $bg_height;
+
+  background-image: url('#{$img-url}#{$name}');
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}

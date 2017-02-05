@@ -1,0 +1,40 @@
+// responsive style for features-summary section on tablet
+@media only screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .features-summary {
+    &__illustration {
+      @include background-image('responsive/screen-responsive-tablet.png',215px, 360px, 100% 100%, bottom center, no-repeat);
+    }
+    
+    .features-summary-content {
+      &__button {
+        text-align: left;
+      }
+      &__title,
+      &__intro {
+        display: none;
+      }
+    }
+
+    .features-summary-tablet {
+      .features-tablet__title,
+      .features-tablet__intro {
+        text-align: center;
+      }
+
+      .features-tablet__title {
+        @include text-style($font-size-text-extra, $light, unquote($line-height-large + 'px'), $text-title, none,none);
+      }
+
+      .features-tablet__intro {
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        @include text-style($font-size-text-base,$regular, unquote($line-height-small + 'px'), $text-description, none,none);
+      }
+    }
+
+    .tablet-display {
+      display: block;
+    }
+  }
+}

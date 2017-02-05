@@ -1,0 +1,154 @@
+.service {
+  /* Arcodition part */
+  .arcodition {
+    &__title {
+      text-align: center;
+
+      @extend .title;
+    }
+
+    &__description {
+      margin: inherit;
+      padding: $padding-large-horizontal 0;
+
+      text-align: left;
+
+      @extend .section__description;
+    }
+
+    .arcodition-list {
+      &__items {
+        color: $text-description-dark;
+        border-radius: 0;
+        border-color: $base-border-color;
+      }
+    }
+
+    &__header {
+      background-color: $base-color;
+      border-color: $base-border-color;
+
+      a {
+        display: block;
+
+        text-transform: capitalize;
+
+        color: $text-title;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $brand-info;
+
+        a {
+          color: $base-color;
+        }
+      }
+    }
+  }
+
+  .panel {
+    .panel-title {
+      overflow: hidden;
+
+      span {
+        float: right;
+
+        color: $text-description;
+      }
+    }
+  }
+
+  /* Service part scss */
+  background-color: $gray-lighter;
+
+  .service-list {
+    width: 100%;
+
+    border-bottom: none;
+
+    &__items {
+      a {
+        font-size: $font-size-text-medium;
+        font-weight: $bold;
+        line-height: unquote($line-height-small + 'px');
+
+        padding: $padding-small-vertical $padding-extra-horizontal;
+
+        text-transform: capitalize;
+
+        color: $base-color;
+        border: none;
+        border-radius: 0;
+        background-color: $gray-dark;
+        
+        &:hover,
+        &:focus,
+        &:active {
+          color: $gray-dark;
+          border: none;
+          background-color: $base-color;
+        }
+      }
+
+      &:last-child {
+        display: none;
+      }
+
+      &.active {
+        a,
+        a:hover,
+        a:active,
+        a:focus {
+          color: $gray-dark;
+          border: none;
+          background-color: $base-color;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend .arcodition__title;
+  }
+
+  &__description {
+    margin: inherit;
+    padding: $padding-large-horizontal 0;
+
+    text-align: left;
+
+    @extend .section__description;
+  }
+
+  .service-detail {
+    &__items {
+      padding: $padding-large-vertical;
+
+      img {
+        float: left;
+
+        margin: 15px;
+      }
+
+      br {
+        clear: both;
+      }
+    }
+
+    &__items.active {
+      background-color: $base-color;
+    }
+
+    .detail-items__content {
+      color: $text-description-dark;
+    }
+  }
+}

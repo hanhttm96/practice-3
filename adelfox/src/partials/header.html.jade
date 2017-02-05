@@ -1,0 +1,36 @@
+header.header-page
+  .container.header-container
+    nav.navbar.navbar-default.navbar-main
+      .navbar-header.navbar-container
+        button.navbar-toggle.collapsed.menu(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          p.text-toggle Menu
+          div.icon-btn-wrap
+            span.icon-bar.menu-icon
+            span.icon-bar.menu-icon
+            span.icon-bar.menu-icon
+            span.icon-bar.menu-icon
+        a.navbar-brand.navbar__logo(href='javascript: void(0);')
+          img(src="images/logo/logo.png", alt="Adelfox logo")
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          each link in ['Home', 'Pages', 'Portfolio', 'Shop', 'Blog', 'Shortcodes', 'Features']
+            li.dropdown(role='presentation')
+              a.dropdown-toggle.dropdown-border.dropdown(data-toggle='dropdown', href='javascript: void(0);', role='button', aria-haspopup='true', aria-expanded='false')= link
+                span.icon-chevron-small-down.pull-right.dropdown-icon
+              ul.dropdown-menu.dropdown-border
+                li
+                  a(href='javascript: void(0);') Action
+                li
+                  a(href='javascript: void(0);') Another action
+                li
+                  a(href='javascript: void(0);') Something else here
+                li.divider(role='separator')
+                li
+                  a(href='javascript: void(0);') Separated link
+
+                li.divider(role='separator')
+                li
+                  a(href='javascript: void(0);') One more separated link
+          li
+            a(href="javascript: void(0);")
+              span.icon-search.icon-search__position

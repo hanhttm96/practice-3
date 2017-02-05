@@ -1,0 +1,12 @@
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .footer {
+    .footer-nav {
+      &__list {
+        .nav-list__items {
+          width: 16.6%;
+          padding: $padding-base-horizontal 0;
+        }
+      }
+    }
+  }
+}

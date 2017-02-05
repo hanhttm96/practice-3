@@ -1,0 +1,21 @@
+// responsive style for mobile advance section on mobile
+@media only screen and (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .mobile-intro {
+    &__title {
+      margin-top: 50px;
+
+      text-align: center;
+    }
+
+    &__button {
+      text-align: center;
+    }
+  }
+
+  .mobile-illustration {
+    margin-bottom: -50px;
+    margin-left: -30px;
+
+    @include background-image('mobiles/mobile-illustration-mobile.png', 445px, 320px, 100% 100%, bottom center, no-repeat);
+  }
+}

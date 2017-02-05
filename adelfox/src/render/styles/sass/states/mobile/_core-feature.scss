@@ -1,0 +1,14 @@
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .banner-content__description {
+    img {
+      min-height: inherit;
+      padding: 20px;
+      border: 1px solid $base-color;
+      border-radius: 4px;
+    }
+  }
+
+  .core-feature__content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+//- include mixins and variables for our_team part
+include mixins/our_team_mixins.html.jade
+
+section.our-team
+  .container
+    .our-team__title
+      p Meet our amazing team.
+    .our-team__intro
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe esse harum eos consectetur, omnis ipsam dolor fuga reprehenderit tempora deleniti voluptas iste.
+    .our-team-content
+      .row
+        each member in members
+          .col-xs-12.col-sm-3
+            .our-team__member
+              .member-image
+                .overlay
+                  .social-network
+                    a.link-style(href="javascript: void(0);")
+                     span.icon-facebook.social-network__icon
+                  .social-network
+                    a.link-style(href="javascript: void(0);")
+                      span.icon-twitter.social-network__icon
+                  .social-network
+                    a.link-style(href="javascript: void(0);")
+                      span.icon-pinterest.social-network__icon
+              .member-infor
+                .member-infor__name
+                  p= member.name
+                .member-infor__position
+                  p= member.position
+                .member-infor__description
+                  p= member.description
+
+
+
+
+

@@ -1,0 +1,58 @@
+.twitter {
+  color: $base-color;
+  
+  .twitter-banner {
+    max-width: 650px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .twitter-button {
+    &--follow {
+      font-size: $font-size-text-medium;
+      font-weight: $bold;
+      line-height: unquote($line-height-small + 'px');
+
+      padding: $padding-base-vertical 45px;
+
+      text-transform: uppercase;
+
+      border-radius: $border-radius-btn;
+      background-color: $button-darkest;
+    }
+  }
+
+  .twitter-content {
+    line-height: unquote($line-height-large + 'px');
+
+    padding: $padding-base-vertical;
+  }
+
+  .twitter-indicators {
+    display: inline-block;
+
+    li {
+      border: 2px solid $base-color;
+      background-color: $gray-lighter;
+
+      &:hover,
+      &:active,
+      &.active {
+        background-color: $button-dark;
+      }
+    }
+  }
+  
+  .twitter-icon {
+    font-size: $font-size-text-extra;
+
+    display: inline-block;
+
+    padding: 40px;
+
+    border: 5px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    background-color: $brand-info;
+  }
+}

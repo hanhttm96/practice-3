@@ -1,0 +1,14 @@
+@media only screen and (min-width: $screen-md) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile,
+  .tablet {
+    display: none;
+  }
+
+  section {
+    padding: $padding-section 0;
+  }
+}

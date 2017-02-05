@@ -1,0 +1,36 @@
+.contact {
+  &__title {
+    text-align: center;
+
+    @extend .title;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+
+    @extend .section__description;
+  }
+
+  .contact-form {
+    &__input {
+      margin-bottom: 10px;
+    }
+
+    button {
+      font-weight: $bold;
+
+      width: 100%;
+      padding: $padding-larger-horizontal 0;
+
+      @include color-style($brand-info, $base-color);
+    }
+  }
+
+  .direction {
+    padding: $padding-larger-horizontal 0;
+    
+    img {
+      width: 100%;
+    }
+  }
+}

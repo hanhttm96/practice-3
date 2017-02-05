@@ -1,0 +1,36 @@
+// style for purchase-now section on all of screen
+.purchase-now {
+  background-color: $gray-lighter;
+
+  .purchase-intro,
+  &__button {
+    text-align: center;
+  }
+
+  .purchase-intro {
+    display: inline-block;
+
+    &__title {
+      @include text-style($font-size-text-extra, $light, unquote($line-height-large + 'px'), $text-title, none,none);
+    }
+
+    &__detail {
+      margin-top: 20px;
+
+      @include text-style($font-size-text-base,$regular, unquote($line-height-small + 'px'), $text-description, none,none);
+    }
+  }
+  
+  //button in purchase-now
+  &__button {
+    margin-top: 35px;
+
+    .purchase-button {
+      border-bottom: 4px solid $shadow-btn-color;
+
+      @include button-size($padding-base-vertical, $padding-larger-horizontal, $font-size-btn, $line-height-small, $border-radius-btn) ;
+      @include button-style($base-color, $brand-primary, none, $base-color, $gray-darker, $gray-darker, $base-color, $brand-info, $brand-info );
+      @include text-style($font-size-text-medium, $regular, unquote($line-height-small + 'px') , $base-color, uppercase,none);
+    }
+  }
+}

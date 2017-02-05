@@ -1,0 +1,38 @@
+- var tab_content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid pariatur, quis fugiat unde culpa sit atque sunt laudantium rerum doloribus architecto aut accusamus. Voluptates quis, architecto voluptate voluptatem assumenda itaque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid pariatur, quis fugiat unde culpa sit atque sunt laudantium rerum doloribus architecto aut accusamus. Voluptates quis, architecto voluptate voluptatem assumenda itaque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid pariatur, quis fugiat unde culpa sit atque sunt laudantium rerum doloribus architecto aut accusamus. Voluptates quis, architecto voluptate voluptatem assumenda itaque."
+//- Mixin for collapse
+mixin arcodition_list_items(id_item, id_content, open)
+  .panel.panel-default.arcodition-list__items
+          .arcodition__header.panel-heading(role='tab', id= id_item)
+            h4.panel-title
+              a(role='button', data-toggle='collapse', data-parent='#accordion', href= "#"+ id_content, aria-expanded= open, aria-controls= id_content)= id_item
+                span.icon-plus
+          if open =="true"
+            .panel-collapse.collapse.in(role='tabpanel', aria-labelledby= id_item, id= id_content)
+              .panel-body= tab_content
+          else
+            .panel-collapse.collapse(role='tabpanel', aria-labelledby= id_item, id= id_content)
+              .panel-body= tab_content
+
+//- Mixin content service
+mixin service_content(id_sesrvice, active)
+  if active == "active"
+    .service-detail__items.tab-pane.active(role='tabpanel', id= id_sesrvice)
+      p.detail-items__content
+        img(src="images/customers/color-media-logo.png")
+        = tab_content
+        br
+  else
+    .service-detail__items.tab-pane(role='tabpanel', id= id_sesrvice)
+      p.detail-items__content
+        img(src="images/customers/color-media-logo.png")
+        = tab_content
+        br
+//- Mixin for menu service
+mixin service_menu(id_service, active)
+  if active == "active"
+    li.service-list__items.active(role='presentation')
+      a(href="#" + id_service, aria-controls= id_service, role='tab', data-toggle='tab')= id_service
+  else
+    li.service-list__items(role='presentation')
+      a(href="#" + id_service, aria-controls= id_service, role='tab', data-toggle='tab')= id_service
+//- End Mixins

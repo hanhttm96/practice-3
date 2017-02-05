@@ -1,0 +1,12 @@
+/* media query for desktop*/
+@media screen and (min-width: $screen-md){
+  .portfolio {
+    .slide {
+      .slide-inner {
+        &__caption {
+          max-width: 500px;
+        }
+      }
+    }
+  }
+}

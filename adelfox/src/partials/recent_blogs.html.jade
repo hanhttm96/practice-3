@@ -1,0 +1,17 @@
+//- include mixins and variables for blog part
+include mixins/recent_blog_mixins.html.jade
+
+//- Start session blog
+section.blog
+  .container
+    h4.blog__title breaking news
+    p.blog__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis, fugiat ducimus, animi consequatur nisi hic. Fugiat corrupti aliquid ad sequi.
+    ul.blog__news.row
+      //- Add each mixin
+      + news("hello", url_image, "under-water.png", content)
+      + news("hello", url_image, "watchers.png", content)
+      + news("hello", url_image, "under-water.png", content)
+      + news("hello", url_image, "fire-wall.png", content)
+      + news("hello", url_image, "fire-wall.png", content)
+      + news("hello", url_image, "fire-wall.png", content)
+    a.btn.blog__news--view(href="javascript: void(0);") Load More Post

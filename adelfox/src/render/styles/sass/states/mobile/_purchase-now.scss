@@ -1,0 +1,14 @@
+// responsive style for purchase-now section on mobile
+@media only screen and (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .purchase-now {
+    padding: $padding-section 0;
+    
+    .purchase-intro {
+      text-align: center;
+
+      &__detail {
+        margin-top: 20px;
+      }
+    }
+  }
+}

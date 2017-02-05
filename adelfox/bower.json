@@ -1,0 +1,34 @@
+{
+  "name": "vendor",
+  "version": "1.3.4",
+  "authors": [
+    "Vuong and Dieu"
+  ],
+  "description": "Another way to use AMD",
+  "main": "vendor.js",
+  "ignore": [
+    "*.html",
+    "images",
+    "style",
+    "deploy.js",
+    "webpack.config.js",
+    "node_modules",
+    ".htaccess",
+    "bower_components"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "amd",
+    "vendor",
+    "include",
+    "define"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/morulus/vendor",
+  "dependencies": {
+    "bootstrap-sass": "boostrap-sass#^3.3.7",
+    "compass-sass-mixins": "*"
+  }
+}

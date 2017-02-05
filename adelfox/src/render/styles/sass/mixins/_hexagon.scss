@@ -1,0 +1,43 @@
+@mixin hexagon($background-color, $border-color, $width) {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-right: solid 5px $border-color;
+  border-left: solid 5px $border-color;
+  background-color: $background-color;
+
+  @include size(80px, 46px);
+
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: 1;
+    left: 7px;
+
+    content: '';
+    -webkit-transform: scaleY(.5774) rotate(-45deg);
+        -ms-transform: scaleY(.5774) rotate(-45deg);
+            transform: scaleY(.5774) rotate(-45deg);
+
+    background-color: inherit;
+
+    @include size(56px, 56px);
+  }
+
+  &:before {
+    top: -28px;
+
+    border-top: solid 7px $border-color;
+    border-right: solid 7px $border-color;
+  }
+  
+  &:after {
+    bottom: -28px;
+
+    border-bottom: solid 7px $border-color;
+    border-left: solid 7px $border-color;
+  }
+}

@@ -1,0 +1,12 @@
+//- include mixin and variables for capabilities
+include mixins/capabilities_mixins.html.jade
+
+section.capabilities
+  .container.capabilities-container
+    h4.capabilities__title Adelfox's Capabilities
+    p.capabilities__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis doloribus quis voluptates. Suscipit a asperiores id delectus non quaerat necessitatibus ex fugiat
+    ul.capabilities__list.list.row
+      + capabilities("adobe photoshop", content, "80%")
+      + capabilities("javascript", content, "80%")
+      + capabilities("photography", content, "80%")
+      + capabilities("wordpress", content, "80%")

@@ -1,0 +1,111 @@
+// introduction section
+.introduction {
+  background-color: $gray-lighter;
+  &__title,
+  &__detail {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include text-style($font-size-h4, $light, unquote($line-height-large + 'px') , $text-title, none,none);
+  }
+
+  &__detail {
+    margin-bottom: 40px;
+
+    @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px') , $text-description, none,none);
+  }
+
+  .introduction-content {
+    .introduction-item {
+      margin-top: 20px;
+      &:hover {
+        .introduction-item__title {
+          color: $brand-info;
+        }
+      }
+
+      &__image {
+        position: relative;
+
+        padding: 87px;
+
+        cursor: pointer;
+
+        border-width: 1px 1px 5px;
+        border-style: solid;
+        border-color: $gray-dark;
+        background-color: $gray-dark;
+        .overlay,
+        .overlay-triangle {
+          visibility: hidden;
+
+          cursor: pointer;
+
+          opacity: 0;
+        }
+
+        &:hover {
+          border-width: 1px 1px 5px;
+          border-style: solid;
+          border-color: $image-border;
+          .overlay,
+          .overlay-triangle {
+            visibility: visible;
+
+            cursor: pointer;
+
+            opacity: 1;
+          }
+        }
+
+        .overlay,
+        .overlay-plus-icon,
+        .overlay-triangle {
+          position: absolute;
+        }
+
+        .overlay,
+        .overlay-plus-icon {
+          margin: auto;
+        }
+
+        .overlay {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          @include circle(50px, $brand-info-light);
+          @include square(50px);
+          .overlay-plus-icon {
+            top: 18px;
+            left: 18px;
+
+            color: $base-color;
+          }
+        }
+
+        .overlay-triangle {
+          right: -1px;
+          bottom: -24px;
+
+          border-top: 20px solid $image-border;
+          border-left: 20px solid transparent;
+
+          @include size(0,0);
+        }
+      }
+
+      &__title {
+        @include text-style($font-size-h5, $regular, unquote($line-height-large + 'px'), $gray-darker, none, none);
+      }
+      
+      &__detail {
+        @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px'), $text-description, none, none);
+      }
+    }
+  }
+}

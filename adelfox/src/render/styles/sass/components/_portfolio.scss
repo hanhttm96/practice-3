@@ -1,0 +1,173 @@
+/* Portfolio part */
+.portfolio {
+  padding-bottom: 50px;
+
+  text-align: center;
+
+  background-color: $gray-lighter;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @extend .title;
+  }
+
+  .portfolio-menu {
+    .menu-list {
+      display: none;
+    }
+
+    .menu-group__dropdown {
+      left: inherit;
+
+      min-width: 300px;
+      .menu-list__items a {
+        color: $text-description;
+      }
+    }
+  }
+
+  .menu-list {
+    margin: 50px 0;
+
+    &__items {
+      a {
+        font-size: $font-size-text-base;
+        font-weight: 400;
+        line-height: unquote($line-height-large + 'px');
+
+        padding: $padding-large-horizontal $padding-extra-vertical;
+
+        color: $text-description;
+        &:hover,
+        &:active,
+        &:focus,
+        &.visited {
+          color: $base-color;
+          background-color: $brand-info;
+        }
+      }
+
+      &:first-child,
+      &:last-child {
+        font-size: 30px;
+      }
+    }
+  }
+
+  /* dropdown menu in mobile */
+  .menu-group {
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    justify-content: center;
+    align-items: inherit;
+
+    input {
+      max-width: 300px;
+    }
+
+    &__button,
+    input {
+      display: inline;
+    }
+  }
+
+  /* Start slider*/
+  .slide {
+    .slide-indicators {
+      position: static;
+      bottom: 0;
+      left: inherit;
+      text-align: center;
+
+      width: inherit;
+      margin-top: 20px;
+      margin-bottom: 0;
+      margin-left: initial;
+
+      li {
+        width: 13px;
+        height: 13px;
+
+        background-color: $gray-indicators-dark;
+      }
+
+      .active {
+        width: 15px;
+        height: 15px;
+
+        background-color: $brand-info;
+      }
+    }
+
+    .slide-control {
+      margin-top: -30px;
+
+      @extend .slide-control;
+
+      &__button {
+        @extend .slide-control__button;
+      }
+    }
+
+    .slide-inner {
+      min-height: 200px;
+
+      outline: 2px solid $base-color;
+
+      @extend .clearfix;
+
+      img {
+        min-height: 200px;
+      }
+
+      /* Caption for slide */
+      &__caption {
+        bottom: 0;
+
+        display: none;
+
+        max-width: 300px;
+        height: 100%;
+        padding: 20px;
+
+        text-align: left;
+
+        color: $base-color;
+        background-color: $gray-darker;
+
+        &--view {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          width: 100%;
+          padding: 20px;
+
+          color: $brand-info;
+          background-color: #22292d;
+          &:hover,
+          &:visited,
+          &:focus {
+            cursor: pointer;
+            text-decoration: none;
+
+            color: $brand-info;
+          }
+          
+          span {
+            margin: -20px; /* resolve for padding 20px */
+            padding: 20px 25px;
+
+            background-color: #111314;
+
+            @extend .pull-right;
+          }
+        }
+      }
+    }
+  }
+}

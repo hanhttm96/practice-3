@@ -1,0 +1,77 @@
+// responsive style for feature section on mobile
+.feature-item {
+  .feature-item__icon {
+    font-size: $font-size-text-extra;
+
+    position: absolute;
+    top: 29px;
+    left: 24px;
+
+    color: $base-color;
+  }
+
+  // button for feature item
+  &__button {
+    position: absolute;
+    bottom: -20px;
+
+    transform: translateX(-50%);
+
+    border: 1px solid;
+    outline: none;
+
+    @include button-size($padding-smaller-vertical, $padding-larger-horizontal, $font-size-btn-small, unquote($line-height-large + 'px'), $border-radius-btn) ;
+    @include button-style($base-color, $brand-info, $brand-info, $base-color, $gray-darker, $gray-darker, $base-color, $brand-info, $brand-info );
+    @include text-style($font-size-btn-small, $light, unquote($line-height-large + 'px') , $base-color, none,none);
+  }
+  // feature intro
+  .feature-item-intro {
+    text-align: center;
+
+    .feature-intro__title {
+      @include text-style($font-size-h5, $regular, unquote($line-height-large + 'px'), $gray-darker, none, none);
+    }
+
+    .feature-intro__detail {
+      @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px'), $text-description, none, none);
+    }
+  }
+
+  .feature-item--wrap {
+    position: relative;
+
+    padding: 50px 18px;
+
+    cursor: pointer;
+
+    border: 1px solid $gray-light;
+    border-bottom: 3px solid $gray-light;
+
+    &:hover {
+      .feature-item__hexagon {
+        background-position: -95px -5px;
+      }
+      
+      .feature-item__button {
+        color: $base-color;
+
+        @include color-style($gray-darkest, $gray-darkest);
+      }
+    }
+  }
+  //hexagon for feature icon
+  &__hexagon {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+
+    // width: 80px;
+    // height: 92px;
+    @include size(80px, 92px);
+
+    transform: translateX(-50%);
+
+    background: url('../../../../images/features/hexagon.png') no-repeat;
+    background-position: -5px -5px;
+  }
+}

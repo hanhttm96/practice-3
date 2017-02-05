@@ -1,0 +1,53 @@
+$icomoon-version: '?2oy86c';
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$icomoon-font-path}/icomoon.eot'+ $icomoon-version);
+  src:  url('#{$icomoon-font-path}/icomoon.eot' + $icomoon-version + '#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf' + $icomoon-version) format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff' + $icomoon-version) format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg' + $icomoon-version + '#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$icon-classes: 
+  ("paper-plane-o" $icon-paper-plane-o)
+  ("bulb" $icon-bulb) ("box" $icon-box) 
+  ("zoom_out_map" $icon-zoom_out_map)
+  ("cart" $icon-cart) 
+  ("search" $icon-search) 
+  ("menu" $icon-menu) 
+  ("star-full" $icon-star-full) 
+  ("plus" $icon-plus)
+  ("circle-down" $icon-circle-down)
+  ("facebook" $icon-facebook) 
+  ("twitter" $icon-twitter)
+  ("tumblr" $icon-tumblr) 
+  ("pinterest" $icon-pinterest) 
+  ("iphone" $icon-iphone)
+  ("droplet" $icon-droplet)
+  ("camera" $icon-camera)
+  ("laptop" $icon-laptop)
+  ("plus" $icon-plus)
+  ("shopping-bag" $icon-shopping-bag)
+  ("chevron-small-down" $icon-chevron-small-down);
+
+@each $item in $icon-classes {
+  @include iconfont-classes(#{nth($item,1)}, nth($item,2));
+}

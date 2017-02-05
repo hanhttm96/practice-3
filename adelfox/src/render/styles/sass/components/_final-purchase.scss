@@ -1,0 +1,24 @@
+.final-purchase {
+  text-align: center;
+
+  @include background-image('purchase/bg.png', 350px, 100%, 100% 100%, bottom center, no-repeat);
+  
+  &__title {
+    @include text-style($font-size-h4, $light, unquote($line-height-large + 'px') , $base-color, none,none);
+  }
+
+  &__message {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px') , $base-color, none,none);
+  }
+
+  .final-purchase__button {
+    border: 1px solid $brand-primary;
+
+    @include button-size($padding-small-vertical, $padding-larger-horizontal, $font-size-btn, $line-height-small, $border-radius-btn) ;
+    @include button-style($base-color, $brand-primary, $brand-primary, $base-color, $gray-darker, $gray-darker, $base-color, $brand-info, $brand-info );
+    @include text-style($font-size-text-medium, $regular, unquote($line-height-small + 'px') , $base-color, uppercase,none);
+  }
+}

@@ -1,0 +1,58 @@
+@media only screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .mobile-advance {
+    @include background-image('mobiles/mobile-background.jpg', 620px, 100%, 100% 100%, bottom center, no-repeat);
+    .mobile-illustration {
+      margin-top: 48px;
+      margin-left: -39px;
+
+      @include background-image('mobiles/mobile-illustration-tablet.png', 520px, 100%, cover, bottom center, no-repeat);
+    }
+
+    .mobile-intro {
+      &__title {
+        text-align: left;
+
+        color: $base-color;
+      }
+
+      &__button {
+        text-align: left;
+        .mobile-button {
+          @include color-style(transparent, $base-color);
+          &:hover {
+            @include color-style($brand-info, $brand-info);
+          }
+        }
+      }
+    }
+
+    .description {
+      .description-hexagon {
+        &__icon {
+          color: $base-color;
+        }
+
+        .filter {
+          -webkit-filter: brightness(0) invert(1);
+                  filter: brightness(0) invert(1);
+        }
+      }
+
+      .description-detail {
+        &__title {
+          color: $base-color;
+        }
+        
+        &__message {
+          color: $base-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .mobile-button {
+    text-align: left;
+  }
+}

@@ -1,0 +1,139 @@
+.slide-banner {
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+
+    text-align: center;
+
+    @include transform-xy(-50%, -50%);
+
+    .banner {
+      @include transform-xy(0, -50%);
+    }
+  }
+}
+
+.core-feature {
+  &__control {
+    display: none;
+
+    border-radius: 50%;
+
+    &--left,
+    &--right {
+      font-size: $font-size-text-extra;
+      font-weight: $thin;
+
+      position: absolute;
+      top: 50%;
+
+      display: none;
+
+      @include size(60px, 60px);
+      padding: $padding-base-vertical - 2;
+
+      text-align: center;
+
+      color: $base-color;
+      border: 2px solid $base-color;
+      border-radius: 50%;
+      background-color: transparent;
+
+      @include transform-y(-50%);
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: .8;
+        color: $base-color;
+        border: 2px solid $gray-darker;
+        background-color: $gray-darker;
+      }
+
+      .slide-control__button {
+        font-size: $font-size-text-extra;
+
+        display: inline-table;
+
+        @extend .center-position;
+      }
+    }
+
+    &--left {
+      left: 100px;
+    }
+
+    &--right {
+      right: 100px;
+    }
+  }
+
+  .banner {
+    &__photo img {
+      max-width: 100%;
+      min-height: inherit;
+    }
+
+    &__button {
+      margin-top: 25px;
+
+      &--view,
+      &--purchase {
+        font-size: $font-size-text-medium;
+
+        margin: 2px;
+        padding: $padding-large-horizontal $padding-large-vertical;
+
+        text-transform: uppercase;
+
+        color: $brand-primary;
+        background-color: $base-color;
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+          color: $base-color;
+          background-color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.media {
+  &__image img {
+    min-height: inherit;
+    padding: $padding-large-vertical;
+
+    border: 1px solid $base-color;
+    border-radius: 10px;
+  }
+
+  &__content {
+    text-align: left;
+
+    &__title {
+      font-weight: $bold;
+    }
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+
+  .slide-inner {
+    .item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

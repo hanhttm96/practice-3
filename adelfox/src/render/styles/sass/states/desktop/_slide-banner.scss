@@ -1,0 +1,56 @@
+/* media query fo desktop */
+@media screen and (min-width: $screen-md) {
+  .slide {
+    .slide-indicators {
+      text-align: right;
+
+      .active {
+        background-color: $brand-info;
+      }
+    }
+
+    .slide-control {
+      background: rgba(0, 0, 0, 0.3);
+      @include square(60px);
+      margin-top: -30px;
+      
+      .slide-control__button,
+      .icon-prev,
+      .icon-next {
+        font-size: 30px;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .banner {
+    left: 0;
+    @include transform-xy(0%, -50%);
+
+    .banner-content {
+      &__amazing {
+        font-size: 26px;
+        line-height: 46px;
+      }
+
+      &__best {
+        font-size: 40px;
+        line-height: 46px;
+      }
+
+      &__design {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    
+    .banner-purchase {
+      .purchase-button {
+        &__icon,
+        &__name {
+          padding: $padding-large-horizontal $padding-large-vertical;
+        }
+      }
+    }
+  }
+}

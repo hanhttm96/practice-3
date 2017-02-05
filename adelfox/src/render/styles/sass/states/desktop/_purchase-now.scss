@@ -1,0 +1,16 @@
+// responsive style for purchase-now section on desktop
+@media screen and (min-width: $screen-md) {
+  .purchase-now {
+    .purchase-intro {
+      max-width: 720px;
+      text-align: left;
+    }
+    
+    &__button {
+      max-width: 200px;
+      display: inline-block;
+      float: right;
+    }
+
+  }
+}

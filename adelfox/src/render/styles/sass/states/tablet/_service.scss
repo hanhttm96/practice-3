@@ -1,0 +1,17 @@
+@media screen and (min-width: $screen-sm) {
+  .arcodition {
+    &__title {
+      text-align: center;
+    }
+  }
+
+  .service {
+    .service-list {
+      &__items {
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+}

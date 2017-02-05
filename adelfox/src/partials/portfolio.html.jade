@@ -1,0 +1,61 @@
+//- include mixins and variables for portolio part
+include mixins/portfolio_mixins.html.jade
+
+section.portfolio
+  .container.portfolio-container
+    h4.portfolio__title feature products
+    nav(aria-label="Page navigation").portfolio-menu
+      // Menu for porfolio in desktop and tablet
+      ul.portfolio-menu__list.pagination.menu-list
+        li.menu-list__items
+          a(href="#portfolio-slide", role="button", data-slide="prev")
+            span(aria-hidden="true") &#60;
+        each item, i in menu
+          if i == 0
+            li.menu-list__items(data-target="#portfolio-slide", data-slide-to= i): a.active(href="javascript: void(0);")= item
+          else
+            li.menu-list__items(data-target="#portfolio-slide", data-slide-to= i): a(href="javascript: void(0);")= item
+        li.menu-list__items
+          a.carousel-control(href="#portfolio-slide", role="button", data-slide="next")
+            span(aria-hidden="true") &#62;
+        // Menu dropdown for portfolio in moblie
+      .portfolio-menu__group.menu-group
+        select.form-control.menu-group__dropdown
+          each item, i in menu
+            if i == 0
+              option(data-target="#portfolio-slide", data-slide-to= i).active= item
+            else
+              option(data-target="#portfolio-slide", data-slide-to= i)= item
+
+    // Slider for portfolio part
+    #portfolio-slide.carousel.slide(data-ride="carousel").portfolio-slide
+      .carousel-inner.slide-inner(role="listbox")
+        each item, i in images
+          if i == 1
+            .item.active.slide-inner__items
+              img(src= image_url + item, alt= item)
+              .carousel-caption.slide-inner__caption.left-arrow
+                h1= item
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis unde earum non maxime incidunt dignissimos alias aut et quibusdam, soluta odit voluptas modi
+                a.slide-inner__caption--view(href="javascript: void(0);") View more
+                  span(aria-hidden="true") &#43;
+          else
+            .item.slide-inner__items
+              img(src= image_url + item, alt= item)
+              .carousel-caption.slide-inner__caption.left-arrow
+                h1= item
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis unde earum non maxime incidunt dignissimos alias aut et quibusdam, soluta odit voluptas modi
+                a.slide-inner__caption--view(href="javascript: void(0);") View more
+                  span(aria-hidden="true") &#43;
+      ol.carousel-indicators.slide-indicators
+        each item, i in images
+          if i == 0
+            li(data-target="#portfolio-slide", data-slide-to= i).active
+          else
+            li(data-target="#portfolio-slide", data-slide-to= i)
+      a.left.slide-control.carousel-control(href="#portfolio-slide", role="button", data-slide="prev")
+        span.slide-control__button.glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a.right.slide-control.carousel-control(href="#portfolio-slide", role="button", data-slide="next")
+        span.slide-control__button.glyphicon.glyphicon-chevron-right
+        span.sr-only Next

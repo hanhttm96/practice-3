@@ -1,0 +1,51 @@
+//- include mixins and variables for customer_feedback part
+include mixins/customer_feedback_mixins.html.jade
+
+section.customer
+  .container.customer-container
+    .customer-intro
+      .customer-intro__title
+        span What people say about us
+      .customer-intro__detail
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quis, reiciendis commodi reprehenderit laudantium quod quia architecto sequi ipsa!
+    .row
+      .customer-detail
+        .col-xs-12.col-sm-5.col-md-6
+          .customer-feedback
+            .media
+              .media-left.display-position
+                .customer-feedback__avatar
+                  a(href="javascript: void(0);")
+                    img.img-circle.customer-avatar.media-object(src= img_url + "avatar.jpg", alt="avatar.jpg")
+              .media-body
+                .media-heading
+                  .customer-feedback__name
+                    p John Doe
+                .customer-feedback__date
+                  p October 26, 2014
+                .break-border
+                .customer-feedback__message
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, totam. Provident veniam, quo maiores.  Lorem ipsum dolor sit amet itaque rerum quae?
+                .customer-feedback__social-networks
+                  .square
+                    span.icon-facebook.icon-color
+                  .square
+                    span.icon-twitter.icon-color
+                  .square
+                    span.icon-pinterest.icon-color
+                  .square
+                    span.icon-tumblr.icon-color
+                .customer-feedback__stars
+                    span.icon-star-full.star-voted.star
+                    span.icon-star-full.star-voted.star
+                    span.icon-star-full.star-voted.star
+                    span.icon-star-full.star-voted.star
+                    span.icon-star-full.star-unvoted.star
+      .col-xs-12.col-sm-7.col-md-6
+        .customer-logo
+          ul.row
+            each logo in logos
+              li.col-xs-6.col-sm-4.logo
+                a(href="javascript: void(0);"): img.logo-effect(src= img_url + logo, alt= logo)
+
+

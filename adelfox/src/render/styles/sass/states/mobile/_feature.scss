@@ -1,0 +1,11 @@
+// responsive style for purchase-now section on mobile
+@media only screen and (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .feature {
+    padding: $padding-section 0;
+
+    .feature-item {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+}

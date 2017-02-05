@@ -1,0 +1,52 @@
+// responsive style for mobile-advance on mobile
+.mobile-intro {
+
+  &__title {
+    @include text-style($font-size-text-extra, $light, unquote($line-height-large + "px"), $text-title, none,none);
+    margin-bottom: 40px;
+  }
+
+  .description {
+
+    .description-hexagon {
+      position: relative;
+
+      &__icon {
+        color: $brand-info;
+
+        font-size: 25px;
+        position: absolute;
+        left: 19px;
+        top: 22px;
+      }
+    }
+
+    .description-detail {
+      padding-left: $padding-base-horizontal;
+
+      &__title {
+        @include text-style($font-size-h5, $regular, unquote($line-height-small + "px") , $text-title, none,none);
+      }
+
+      &__message {
+         @include text-style($font-size-text-base,$regular, unquote($line-height-small + "px"), $text-description, none,none);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    
+    .mobile-button {
+      @include button-size($padding-smallest-vertical, $padding-extra-horizontal, $font-size-btn-small, unquote($line-height-large + "px"), $border-radius-btn) ;
+      @include button-style($base-color, $brand-info, $brand-info, $base-color, $gray-darker, $gray-darker, $base-color, $brand-info, $brand-info );
+      @include text-style($font-size-btn-small, $light, unquote($line-height-large + "px") , $base-color, none,none);
+      border: 1px solid;
+      margin-right: 5px;
+      outline: none;
+    }
+  }
+}
+
+
+

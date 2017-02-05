@@ -1,0 +1,23 @@
+// responsive style for nav-bar on mobile
+@media only screen and (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .header-page {
+    background-color: transparent;
+    
+    .menu {
+      @include color-style($brand-info, $brand-info);
+      .menu-icon {
+        background-color: $base-color;
+      }
+      &:focus,
+      &:hover {
+        @include color-style($brand-info, $brand-info);
+      }
+    }
+  }
+  .text-toggle {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $screen-xs) {
+}

@@ -1,0 +1,27 @@
+// responsive style for nav-bar on desktop
+@media screen and (min-width: $screen-md) {
+  .dropdown-border {
+    border-bottom:transparent;
+  }
+
+  .navbar-container {
+    background-color: transparent;
+  }
+
+  .navbar-container {
+    padding: 0;
+  }
+
+  .navbar__logo {
+    padding: 0;
+  }
+
+  .icon-search__position {
+    margin-top: 20px;
+  }
+
+  .header-page {
+    margin: 20px 0 25px;
+  }
+
+}

@@ -1,0 +1,228 @@
+.footer {
+  background-color: $gray-darker;
+
+  .footer-title {
+    color: $base-footer-title;
+  }
+
+  .footer-nav {
+    border-bottom: 1px solid black;
+    box-shadow: rgba(255, 255, 255, .07) 0 1px 0 inset;
+
+    &__list {
+      margin-bottom: 0;
+      padding: $padding-extra-horizontal 0;
+
+      list-style-type: none;
+
+      text-align: center;
+
+      overflow: hidden;
+
+      .nav-list__items {
+        width: 8.1%;
+        float: left;
+        display: flex;
+        justify-content: center;
+
+        a {
+          display: block;
+          /*Compass mixin meet errors with background image. Use line bellow to instead*/
+
+          background-image: url('../images/footer/icon-footer.png');
+          background-repeat: no-repeat;
+
+          @include sprite-background('../images/footer/icon-footer.png');
+        }
+
+        @for $i from 1 through 12 {
+          .icon#{$i} {
+            @include sprite-column( $i, 30px, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  .footer-content {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 40px 0;
+
+    h5 {
+      font-weight: $bold;
+
+      text-transform: capitalize;
+    }
+
+    &__intro {
+
+      .content-detail {
+        font-size: $font-size-text-base;
+        color: $base-footer-color;
+      }
+
+      a {
+        font-weight: $regular;
+
+        text-transform: uppercase;
+
+        color: $base-footer-content;
+        
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+
+    &__tag {
+      overflow: hidden;
+
+      a {
+        float: left;
+
+        margin: 2px;
+        padding: $padding-base-horizontal $padding-base-vertical;
+
+        color: $base-tag-color;
+        background-color: $gray-darkest;
+        font-weight: $regular;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__widget {
+      overflow: hidden;
+    }
+  }
+}
+
+.footer {
+  .footer-menu {
+    background-color: $gray-darkest;
+
+    .copy-right {
+      font-size: $font-size-text-medium;
+      line-height: unquote($line-height-large + 'px');
+
+      padding: $padding-base-horizontal $padding-large-vertical;
+
+      color: $text-description;
+    }
+
+    &__list {
+      display: none;
+      overflow: hidden;
+
+      margin-bottom: 0;
+
+      list-style-type: none;
+
+      -webkit-padding-start: 0;
+      @extend .pull-right;
+
+      .menu-list__items {
+        float: left;
+
+        a {
+          font-size: $font-size-text-medium;
+          font-weight: $regular;
+          line-height: unquote($line-height-large + 'px');
+
+          display: inline-block;
+
+          padding: $padding-base-horizontal $padding-large-vertical;
+
+          color: $text-description;
+
+          &:hover {
+            text-decoration: none;
+
+            color: $base-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.widget-list {
+  overflow: hidden;
+
+  list-style-type: none;
+
+  -webkit-padding-start: 0;
+
+  &__items {
+    float: left;
+
+    @include square(80px);
+    margin: 2px;
+
+    background-color: $gray-darkest;
+  }
+}
+
+.footer {
+  .footer-content {
+    &__recent {
+      .image-post {
+        position: relative;
+        a {
+          display: block;
+          text-align: center;
+
+          &:hover:before {
+            position: absolute;
+            left: 0;
+
+            @include square(55px);
+
+            content: '+';
+
+            color: $base-color;
+            font-weight: $bold;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: $brand-info;
+          }
+        }
+
+        img {
+          @include square(55px);
+        }
+      }
+
+      .recent-post {
+        &__title,
+        &__date {
+          line-height: unquote($line-height-small + 'px');
+        }
+
+        &__title {
+          font-size: $font-size-text-base;
+          color: $base-footer-color;
+        }
+
+        &__date {
+          font-size: $font-size-text-small;
+          color: $base-footer-content;
+        }
+      }
+
+      .media {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

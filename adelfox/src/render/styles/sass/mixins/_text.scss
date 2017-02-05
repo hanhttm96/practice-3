@@ -1,0 +1,16 @@
+@mixin text-style( $font-size, $font-weight, $line-height, $color, $text-transform, $text-decoration: none) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+
+  text-decoration: $text-decoration;
+  text-transform: $text-transform;
+
+  color: $color;
+}
+
+@mixin base-text-style($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}

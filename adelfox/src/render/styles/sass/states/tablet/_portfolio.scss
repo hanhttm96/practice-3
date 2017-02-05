@@ -1,0 +1,58 @@
+/* media query for tablet*/
+@media screen and (min-width: $screen-sm){
+  .portfolio {
+    .portfolio-container {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .portfolio-menu {
+      .menu-group {
+        display: none;
+      }
+
+      .menu-list {
+        display: inline-block;
+      }
+    }
+
+    .portfolio-slide {
+      .slide-indicator {
+        li {
+          background-color: $gray-light;
+        }
+      }
+
+      .slide-control {
+        display: none;
+        margin-top: -15px;
+      }
+
+      .slide-inner {
+        border: none;
+
+        &__items {
+          right: 0 !important;
+          left: inherit !important;
+        }
+
+        &__caption {
+          display: block;
+          right: 0;
+          left: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .portfolio {
+    .slide {
+      .slide-indicators {
+        margin-top: 50px;
+      }
+    }
+  }
+}

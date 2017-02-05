@@ -1,0 +1,25 @@
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: $lato-font;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 0;
+}
+
+ul {
+    -webkit-padding-start: 0;
+     -moz-padding-start: 0;
+      -ms-padding-start: 0;
+       -o-padding-start: 0;
+          padding-start: 0;
+}

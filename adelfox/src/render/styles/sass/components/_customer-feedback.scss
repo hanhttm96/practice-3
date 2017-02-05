@@ -1,0 +1,98 @@
+//customer feedback section
+.customer {
+  .customer-intro {
+    margin-bottom: 50px;
+
+    &__title,
+    &__detail {
+      text-align: center;
+    }
+
+    &__title {
+       @include text-style($font-size-h4, $light, unquote($line-height-large + "px") , $text-title, capitalize,none);
+    }
+
+    &__detail{
+      @include text-style($font-size-text-base, $regular, unquote($line-height-small + "px") , $text-description, none,none);
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+
+  .customer-feedback {
+    &__name {
+      @include text-style($font-size-h5, $regular, unquote($line-height-small + "px") , $text-title, none,none);
+    }
+    
+    &__date,
+    &__message {
+      @include text-style($font-size-text-base, $regular, unquote($line-height-small + "px") , $text-description, none,none);
+    }
+
+    .break-border {
+      border: 1px solid $border-color;
+    }
+
+    &__social-networks {
+      margin-top: 20px;
+
+      .square {
+        @include square(20px);
+        @include color-style($gray-dark, $gray-dark);
+        display: inline;
+        padding: 5px 7px;
+        margin-right: 10px;
+
+        .icon-color {
+          color: $base-color;
+        }
+      }
+    }
+
+    &__stars {
+      margin-top: 10px;
+
+      .star-voted {
+        color: $brand-info;
+      }
+
+      .star-unvoted {
+        color: $gray-dark;
+      }
+
+      .star {
+        padding-right: $padding-small-horizontal;
+      }
+
+    }
+
+    .customer-avatar {
+      width: 90px;
+      display: inline;
+    }
+  }
+
+  .logo {
+    list-style-type: none;
+
+    .logo-effect {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      cursor: pointer;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

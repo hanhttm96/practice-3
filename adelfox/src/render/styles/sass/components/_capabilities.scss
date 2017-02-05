@@ -1,0 +1,52 @@
+.capabilities {
+  text-align: center;
+
+  &__title {
+    @extend .title;
+  }
+
+  &__description {
+    @extend .section__description;
+  }
+
+  &__list {
+    padding: 30px 0;
+
+    list-style-type: none;
+  }
+
+  .chart {
+    position: relative;
+
+    padding: 10px 0;
+
+    &__title a {
+      @extend .sub__title;
+    }
+
+    &:hover,
+    &:focus {
+      .chart__title a {
+        text-decoration: none;
+
+        color: $brand-info;
+      }
+
+      .chart__image {
+        background-color: $brand-info;
+      }
+    }
+
+    &--circle {
+      left: 50%;
+
+      @include transform-x(-50%);
+    }
+    
+    &__detail {
+      display: inline-block;
+
+      padding: 0 $padding-base-vertical;
+    }
+  }
+}

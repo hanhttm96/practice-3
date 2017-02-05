@@ -1,0 +1,43 @@
+- var menu = ['All', 'Design', 'Marketing', 'Ads Network', 'Awesome']
+//-var image_url = ['images/bg-difference.jpg']
+
+section.feature
+  .container
+    .row
+      p.section__text--description feature products
+      nav(aria-label='Page navigation example')
+        ul.pagination.pagination-lg.justify-content-center
+          li.page-item
+            a.page-link(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+              span.sr-only Previous
+          li.page-item
+            a.page-link(href='#') 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#', aria-label='Next')
+              span(aria-hidden='true') »
+              span.sr-only Next
+    .row
+      // Slider for feature part
+      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+          li(data-target='#carouselExampleIndicators', data-slide-to='1')
+          li(data-target='#carouselExampleIndicators', data-slide-to='2')
+        .carousel-inner(role='listbox')
+          .carousel-item.active
+            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
+          .carousel-item
+            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
+          .carousel-item
+            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.sr-only Next

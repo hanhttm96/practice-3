@@ -1,0 +1,10 @@
+// responsive style for introduction on tablet
+@media screen and (min-width: $screen-sm) {
+  .introduction {
+    .introduction-content {
+      .introduction-item {
+        margin-top: 0;
+      }
+    }
+  }
+}

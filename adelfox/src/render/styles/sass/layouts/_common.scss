@@ -1,0 +1,72 @@
+.title {
+  font-size: $font-size-h4;
+  font-weight: $light;
+  line-height: unquote($line-height-large + 'px');
+
+  text-transform: capitalize;
+
+  color: $text-title;
+}
+
+.section__description {
+  font-size: $font-size-text-base;
+  line-height: unquote($line-height-small + 'px');
+
+  max-width: 570px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: $text-description;
+}
+
+.sub__title {
+  font-size: $font-size-title-medium;
+  font-weight: $regular;
+  line-height: unquote($line-height-small + 'px');
+
+  padding: $padding-base-vertical 0;
+
+  text-transform: capitalize;
+
+  color: $text-title;
+}
+
+.left-arrow {
+  display: inline-block;
+
+  padding: 15px;
+
+  background-color: $gray-darker;
+}
+
+.left-arrow:after {
+  position: absolute;
+  top: 20%;
+  right: 100%;
+
+  display: block;
+
+  width: 0;
+  height: 0;
+  margin-top: -15px;
+
+  content: '';
+
+  border-top: 15px solid transparent;
+  border-right: 15px solid $gray-darker;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+
+.center-position {
+  position: absolute;
+  top: 50%;
+  right: inherit;
+  bottom: inherit;
+  left: 50%;
+
+  margin: 0;
+
+  @include transform-xy(-50%, -50%);
+}

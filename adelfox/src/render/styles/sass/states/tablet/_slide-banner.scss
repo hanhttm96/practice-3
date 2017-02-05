@@ -1,0 +1,78 @@
+/* media query fo tablet */
+@media screen and (min-width: $screen-sm) {
+  .slide-indicators {
+    text-align: center;
+
+    .active {
+      background-color: $gray-darker;
+    }
+  }
+  
+  .slide-control {
+    background: rgba(0, 0, 0, 0.75);
+
+    .slide-control__button,
+    .icon-prev,
+    .icon-next {
+      font-size: 15px;
+      line-height: 1;
+    }
+  }
+
+  .banner {
+    max-width: inherit; //return width in mobile screen
+    @include transform-xy(0%, -50%);
+    
+    .banner-content {
+      &__amazing {
+        @include base-text-style(15px, $regular, 24px);
+      }
+
+      &__best {
+        @include base-text-style(24px, $regular, 24px);
+      }
+
+      &__design {
+        @include base-text-style(12px, $regular, 26px);
+      }
+    }
+
+    .banner-purchase {
+      .purchase-button {
+        display: inline-block;
+    
+        &__icon,
+        &__name {
+          padding: 7px;
+        }
+
+        &__icon {
+          font-size: 20px;
+        }
+
+        .button-content {
+          line-height: 14px;
+
+          &__title {
+            font-size: $font-size-btn-large;
+          }
+
+          &__description {
+            font-size: $font-size-btn-small;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .slide-control {
+    .slide-control__button,
+    .icon-prev,
+    .icon-next {
+      width: initial;
+      height: initial;
+    }
+  }
+}

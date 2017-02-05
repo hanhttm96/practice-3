@@ -1,0 +1,22 @@
+// responsive style for customer-feedback on tablet
+@media only screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+
+}
+
+@media screen and (min-width: $screen-sm) {
+  .customer {
+    .customer-intro__detail {
+      width: 70%;
+    }
+
+    .customer-feedback {
+      text-align: left;
+
+      &__avatar,
+      .display-position {
+        display: table-cell;
+      }
+    }
+  }
+}
+

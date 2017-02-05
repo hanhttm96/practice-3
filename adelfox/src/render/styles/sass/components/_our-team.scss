@@ -1,0 +1,81 @@
+.our-team {
+  background-color: $gray-lighter;
+  
+  &__title,
+  &__intro {
+    text-align: center;
+  }
+
+  &__title {
+    @include text-style($font-size-h4, $light, unquote($line-height-large + 'px') , $text-title, none,none);
+  }
+
+  &__intro {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px') , $text-description, none,none);
+  }
+
+  .our-team-content {
+    .our-team__member {
+      cursor: pointer;
+
+      border-bottom: 15px solid $base-color;
+      &:hover {
+        border-bottom: 15px solid $brand-info;
+        .member-image {
+          background-color: $brand-info;
+        }
+      }
+
+      .member-image {
+        position: relative;
+
+        background-color: $gray-dark;
+
+        @include size(100%, 220px);
+        .overlay {
+          @extend .center-position;
+          .social-network {
+            display: inline-block;
+
+            padding: 3px 5px;
+
+            background-color: $base-color;
+
+            @include square(24px);
+            .link-style {
+              text-decoration: none;
+            }
+            &__icon {
+              color: $gray-darker;
+            }
+            &:hover {
+              .social-network__icon {
+                color: $brand-info;
+              }
+            }
+          }
+        }
+      }
+
+      .member-infor {
+        padding-top: $padding-small-vertical;
+        padding-bottom: $padding-small-vertical;
+        padding-left: $padding-large-horizontal;
+
+        background-color: $base-color;
+        &__name {
+          @include text-style($font-size-h5, $regular, unquote($line-height-large + 'px'), $gray-darker, none, none);
+        }
+        &__position {
+          @include text-style($font-size-h5, $regular, unquote($line-height-large + 'px'), $text-description, none, none);
+        }
+        &__description {
+          @include text-style($font-size-text-base, $regular, unquote($line-height-small + 'px'), $text-description, none, none);
+        }
+      }
+    }
+  }
+}

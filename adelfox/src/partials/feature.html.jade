@@ -1,0 +1,19 @@
+//- include mixins and variables for feature part
+include mixins/feature_mixins.html.jade
+
+section.feature
+  .container.feature-container
+    .row
+      each feature in features
+        .col-xs-12.col-sm-4
+          .feature-item
+            .feature-item--wrap
+              .feature-item__hexagon
+                a(href="javascript: void(0);")
+                span.feature-item__icon(class = feature.icon)
+              .feature-item-intro
+                .feature-intro__title
+                  h5= feature.title
+                .feature-intro__detail
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius rerum velit recusandae vitae? Hic provident quisquam sint. 
+                  button.feature-item__button read more

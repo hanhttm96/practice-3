@@ -1,0 +1,14 @@
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop,
+  .tablet {
+    display: none;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+}
