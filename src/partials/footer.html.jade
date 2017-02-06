@@ -5,13 +5,13 @@ footer
       .row
         ul.navSocial
           - for (var i=1; i<13; i++) {
-            li
+            li.col-md-1.col-sm-2
               a(href="javascript: void(0);", class= 'icon' + i)
           - }
   .footer-content
     .container
       .row
-        .col-md-3
+        .col-md-3.col-sm-6
           h2.logo__footer
             a.navbar-brand.logo__text(href='javascript: void(0);') adel
               strong fox
@@ -20,7 +20,7 @@ footer
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa laboriosam aperiam sed nemo nam nesciunt porro accusantium impedit corrupti quibusdam! 
           a.text__a--custom(href="javascript: (void:0);")
             | LEAR MORE 
-        .col-md-3
+        .col-md-3.col-sm-6
           p.object recent post
           br
           - for (var i=1; i<4; i++) {
@@ -32,13 +32,13 @@ footer
                 a.post__img--capt(href='javascript: void(0);')= lorem7
                 p.section__text--description October 15, 2013
           - }
-        .col-md-3
+        .col-md-3.col-sm-6
           p.object tags
           br
           each tags in ['awesome','photography', 'wed design', 'infographic', 'guitar', 'theme', 'website', 'artist design', 'themeforest','music']
             a.text__a--custom(href='javascript: void(0);')
               span.item-tag= tags
-        .col-md-3
+        .col-md-3.col-sm-6
           p.object flickr widget
           br
           .flickr-widget

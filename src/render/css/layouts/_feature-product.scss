@@ -2,6 +2,9 @@
   background-color: $blue-lighter;
   @extend %section-margin;
   text-align: center;
+  .active {
+    background-color: $color-info;
+  }
 }
 
 .feature-menu__group {
@@ -18,7 +21,6 @@
 
 .box_feature {
   padding: 0 $border-radius-small;
-
 }
 
 .box__item {

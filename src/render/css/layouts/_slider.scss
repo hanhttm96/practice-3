@@ -1,7 +1,15 @@
 .slider-banner {
   position: relative;
+  .carousel-indicators {
+    right: 50%;
+    margin-right: -40%;
+    width: 10%;
+    left: inherit;
+    .active {
+      background-color: $color-info;
+    }
+  }
 }
-
 .item {
   .img__slider {
     width: 100%;
