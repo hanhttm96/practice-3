@@ -2,6 +2,12 @@
 .nav__category {
   color: $blue-dark;
   text-transform: capitalize;
+  &.contact__sm{
+    display: none;
+  }
+  #exampleInputSearch {
+    display: none;
+  }
   .group-menu {
      width: 400px;
      padding: 0;

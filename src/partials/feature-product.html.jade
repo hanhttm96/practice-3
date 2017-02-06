@@ -1,43 +1,78 @@
 - var menu = ['All', 'Design', 'Marketing', 'Ads Network', 'Awesome']
-//-var image_url = ['images/bg-difference.jpg']
 
 section.feature
   .container
     .row
-      p.section__text--description feature products
-      nav(aria-label='Page navigation example')
+      p.section__text--title feature products
+      nav(aria-label='Page navigation')
         ul.pagination.pagination-lg.justify-content-center
-          li.page-item
-            a.page-link(href='#', aria-label='Previous')
-              span(aria-hidden='true') «
-              span.sr-only Previous
-          li.page-item
-            a.page-link(href='#') 1
-          li.page-item
-            a.page-link(href='#') 2
-          li.page-item
-            a.page-link(href='#') 3
-          li.page-item
-            a.page-link(href='#', aria-label='Next')
-              span(aria-hidden='true') »
-              span.sr-only Next
+          each item, i in menu
+            if i == 0
+              li.menu-list__items(data-target="#feature-slider", data-slide-to= i) 
+                a.active(href="javascript: void(0);")= item
+            else
+              li.menu-list__items(data-target="#feature-slider", data-slide-to= i)
+                a(href="javascript: void(0);")= item
+      // Menu dropdown for portfolio in moblie
+      .feature-menu__group.menu-group
+        select.form-control.menu-group__dropdown
+          each item, i in menu
+            if i == 0
+              option(data-target="#feature-slider", data-slide-to= i).active= item
+            else
+              option(data-target="#feature-slider", data-slide-to= i)= item
     .row
       // Slider for feature part
-      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
-        ol.carousel-indicators
-          li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
-          li(data-target='#carouselExampleIndicators', data-slide-to='1')
-          li(data-target='#carouselExampleIndicators', data-slide-to='2')
+      #feature-slider.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators.carousel-custom
+          each item, i in menu
+            if i == 0
+              li(data-target="#feature-slider", data-slide-to= i).active
+            else
+              li(data-target="#feature-slider", data-slide-to= i)
+
+        // Wrapper for slides
         .carousel-inner(role='listbox')
-          .carousel-item.active
-            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
-          .carousel-item
-            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
-          .carousel-item
-            img.d-block.img-fluid(src= 'images/bg-difference.jpg', alt= item)
-        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
+          each item, i in menu
+            if i == 0
+              .item.active
+                .wrap__item--category
+                  - for (var i=1; i<7; i++) {
+                    .col-md-4.col-sm-6.box_feature
+                      .box__item
+                        .hv-box_item
+                          ul.more-view
+                            li.more-view__item
+                              span.icon-maximize.position_icon
+                            li.more-view__item
+                              span.icon-add.position_icon
+                          .up-arrow
+                            p.object maecenas bibendum
+                            p.section__text--description Marketing Online
+                  - }
+            else
+              .item
+                .wrap__item--category
+                  - for (var i=1; i<7; i++) {
+                    .col-md-4.col-sm-6.box_feature
+                      .box__item
+                        .hv-box_item
+                          ul.more-view
+                            li.more-view__item
+                              span.icon-maximize.position_icon
+                            li.more-view__item
+                              span.icon-add.position_icon
+                          .up-arrow
+                            p.object maecenas bibendum
+                            p.section__text--description Marketing Online
+                  - }
+            
+                // Controls
+        a.left.carousel-control(href='#feature-slider', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
           span.sr-only Previous
-        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
+        a.right.carousel-control(href='#feature-slider', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
           span.sr-only Next
+

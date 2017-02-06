@@ -35,12 +35,14 @@ footer {
     color: $blue-dark;
     @extend .navSocial;
     @include clearfix;
-    .object {
-      text-transform: capitalize;
-      margin-top: $top-small;
-    }
+
     .logo__footer {
       overflow: hidden;
+    }
+
+    .logo__text {
+      color: $blue-lighter;
+      font-size: $font-size-h1;
     }
 
     .post__img {
@@ -52,7 +54,7 @@ footer {
       .icon-plus {
         display: none;
         position: absolute;
-        left: 38%;
+        left: 28%;
         margin-top: $top-small;
         color: $while-base;
         overflow: hidden;
@@ -85,11 +87,14 @@ footer {
         margin-bottom: $top-small;
       }
     }
+
     .media__footer-custom {
       margin-top: $metric-tiny;
+
       &:hover .post__img--capt {
         color: $blue-lighter;
       }
+
       &:hover .post__img{
         background-color: $color-info;
         cursor: pointer;
@@ -100,6 +105,7 @@ footer {
       }
     }
   }
+
   .footer-bottom {
     background-color: $color-primary-darken;
 

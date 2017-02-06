@@ -10,11 +10,12 @@ a {
     text-decoration: none
   }
 }
-
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 .nav {
-  display: flex;
-  justify-content: flex-end;
-  float: none;
+  float: right;
 }
 
 .navbar-default {

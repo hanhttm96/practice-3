@@ -4,3 +4,7 @@
 	background-size: contain;
 	@include size (100%, 520px);
 }
+.mobile {
+  padding-top: $section-padding;
+  position: relative;
+}

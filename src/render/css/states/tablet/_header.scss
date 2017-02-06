@@ -1,0 +1,13 @@
+@media (max-width: $screen-sm) { 
+  .header-top {
+    display: none;
+  }
+
+  .nav.navbar-nav {
+    display: block !important;
+  }
+
+  .nav {
+    float: left;
+  }
+}

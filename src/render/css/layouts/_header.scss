@@ -2,6 +2,11 @@
 header {
   margin: 0;
   padding: 0;
+
+  .logo__text {
+    color: $blue-dark;
+    font-size: $font-size-h1;
+  }
 }
 
 .header-top {
@@ -26,16 +31,3 @@ header {
   }
 }
 
-.__sub-level2 {
-  padding-left: $metric-large;
-  .--list-circle {
-    list-style: disc;
-  }
-  a {
-    color: $btn-default-border;
-    &:hover {
-      text-decoration: none;
-      color: $color-info;
-    }
-  }
-}

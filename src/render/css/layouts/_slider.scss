@@ -81,28 +81,7 @@
   }
 }
 
-@media only screen and (max-width : 480px) { 
-  .banner__content {
-    color: $while-base;
-    text-align: center;
-    margin-top: $metric-big;
-    .amazing {
-      font-size: $font-size-main;
-      font-weight: $font-weight-tiny;
-      text-transform: uppercase;
-    }
-
-    .best {
-      font-size: $font-size-main;
-      font-weight: $font-weight-large;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    .design {
-      font-size: $font-size-sixteen;
-      font-weight: $font-weight-tiny;
-      text-transform: capitalize;
-    }
-  }
+.member {
+  position: relative;
+  bottom: -$metric-medium;
 }

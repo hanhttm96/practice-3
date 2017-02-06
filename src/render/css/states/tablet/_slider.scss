@@ -1,0 +1,73 @@
+@media (max-width: $screen-sm) { 
+  .banner__content {
+    color: $while-base;
+    text-align: center;
+    margin-top: $metric-small;
+    
+    .amazing {
+      font-size: $font-size-main;
+      font-weight: $font-weight-tiny;
+      text-transform: uppercase;
+      margin: $metric-tiny;
+    }
+
+    .best {
+      font-size: $font-h3;
+      font-weight: $font-weight-large;
+      text-transform: uppercase;
+      margin: $metric-tiny;
+    }
+
+    .design {
+      font-size: $font-size-sixteen;
+      font-weight: $font-weight-tiny;
+      text-transform: capitalize;
+      margin: $metric-tiny;
+    }
+  }
+  .member {
+    position: relative;
+    bottom: -$metric-tiny;
+  }
+
+  .banner {
+    position: absolute;
+    top: 0;
+    color: $while-base;
+    margin-left: 0;
+  }
+  .banner__purchase {
+    text-align: center;
+    .btn-group {
+      margin: 2px;
+    }
+    .btn {
+      padding: 0 $metric-small;
+    }
+    .button {
+      background-color: $color-primary;
+      border-color: $btn-default-color;
+      height: 60px;
+      .btn__icon {
+        font-size: 50px;
+      }
+      .icon-cube {
+        color: $color-info;
+      }
+      .icon-lamp {
+        color: $color-success;
+      }
+      .title {
+        text-transform: uppercase;
+        font-size: $metric-medium;
+        font-weight: 700;
+        margin: 0;
+      }
+      .description {
+        font-size: $metric-medium;
+        margin: 0;
+        padding-top: 0;
+      }
+    }
+  } 
+}

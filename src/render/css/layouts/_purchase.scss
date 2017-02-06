@@ -5,13 +5,14 @@
   padding: 60px 0;
 }
 .purchase-intro {
-  @extend %section-margin;
+  position: relative;
 }
 .purcahse__box {
   position: relative;
   box-shadow: 1px 1px 5px 1px $btn-default-border;
   text-align: center;
   padding: 50px $margin-medium;
+  margin: $section-padding 0;
   &:hover .btn__read-more {
     background: $black-base;
     cursor: pointer;
