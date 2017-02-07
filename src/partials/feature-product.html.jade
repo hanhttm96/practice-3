@@ -4,7 +4,8 @@ section.feature
   .container
     .row
       p.section__text--title feature products
-      nav(aria-label='Page navigation')
+      // Menu dropdown for feature in desktop
+      nav.feature-menu__desktop(aria-label='Page navigation')
         ul.pagination.pagination-lg.justify-content-center
           each item, i in menu
             if i == 0
@@ -13,8 +14,8 @@ section.feature
             else
               li.menu-list__items(data-target="#feature-slider", data-slide-to= i)
                 a(href="javascript: void(0);")= item
-      // Menu dropdown for portfolio in moblie
-      .feature-menu__group.menu-group
+      // Menu dropdown for feature in moblie
+      .feature-menu__mobile.menu-group
         select.form-control.menu-group__dropdown
           each item, i in menu
             if i == 0
@@ -39,7 +40,7 @@ section.feature
               .item.active
                 .wrap__item--category
                   - for (var i=1; i<7; i++) {
-                    .col-md-4.col-sm-6.box_feature
+                    .col-md-4.col-sm-4.col-xs-4.box_feature
                       .box__item
                         .hv-box_item
                           ul.more-view
@@ -55,7 +56,7 @@ section.feature
               .item
                 .wrap__item--category
                   - for (var i=1; i<7; i++) {
-                    .col-md-4.col-sm-6.box_feature
+                    .col-md-4.col-sm-4.col-xs-4.box_feature
                       .box__item
                         .hv-box_item
                           ul.more-view
@@ -69,10 +70,10 @@ section.feature
                   - }
             
                 // Controls
-        a.left.carousel-control(href='#feature-slider', role='button', data-slide='prev')
+        a.left.carousel-control.carousel__moblie(href='#feature-slider', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
           span.sr-only Previous
-        a.right.carousel-control(href='#feature-slider', role='button', data-slide='next')
+        a.right.carousel-control.carousel__moblie(href='#feature-slider', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
           span.sr-only Next
 

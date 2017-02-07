@@ -1,26 +1,37 @@
 .new {
   background-color: $blue-lighter;
   @extend %section-margin;
+
   .media {
     margin: $margin-medium 0;
+
     .splan {
       background: $blue-light;
       box-sizing: border-box;
       border-top: solid 5px $color-info;
       @include square(140px);
+      &:hover {
+        border-top: solid 5px $color-primary-darken;
+        .day{
+          background-color: $color-primary-darken;
+        }
+      }
     }
+
     .day {
       background: $color-info;
       @include square(50px);
       margin-left: $metric-small;
       text-align: center;
       color: $while-base;
+
       .day-number {
         font-size: $font-h2;
         margin-top: -$top-small;
       }
     }
   }
+  
   .new-intro {
     text-align: center;
   }

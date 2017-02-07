@@ -1,15 +1,18 @@
 .slider-banner {
   position: relative;
+
   .carousel-indicators {
-    right: 50%;
-    margin-right: -40%;
-    width: 10%;
+    right: 30%;
+    margin-right: -20%;
+    width: 20%;
     left: inherit;
+
     .active {
       background-color: $color-info;
     }
   }
 }
+
 .item {
   .img__slider {
     width: 100%;
@@ -28,6 +31,7 @@
   color: $while-base;
   text-align: center;
   margin-top: $metric-big;
+
   .amazing {
     font-size: $font-size-medium;
     font-weight: $font-weight-tiny;
@@ -55,34 +59,43 @@
 .btn-group {
   margin: $metric-tiny;
 }
+
 .banner__purchase {
   text-align: center;
+
   .button {
     background-color: $color-primary;
     border-color: $btn-default-color;
     height: $metric-big-custom;
+
     .btn__icon {
       font-size: $font-size-large;
     }
+
     .icon-cube {
       color: $color-info;
     }
+
     .icon-lamp {
       color: $color-success;
     }
+
     .title {
       text-transform: uppercase;
       font-size: $font-size-sixteen;
       font-weight: 700;
       margin: 0;
     }
+
     .description {
       font-size: $font-size-small;
       margin: 0;
     }
+
     .btn__name--left {
       text-align: left;
     }
+
     .btn__name--right {
       text-align: right;
     }

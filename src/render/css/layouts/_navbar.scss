@@ -2,6 +2,9 @@
 .nav__category {
   color: $blue-dark;
   text-transform: capitalize;
+  .icon-search {
+    font-size: $font-h3;
+  }
   &.contact__sm{
     display: none;
   }
@@ -15,8 +18,10 @@
      box-shadow: 1px 1px 5px 1px #ccc;
      border: none;
      left: -325%;
+
      .sub-level2 {
        border-left: solid 1px $while-base;
+       
        .list-circle {
          list-style-type: disc;
          a {

@@ -4,9 +4,11 @@
   background-size: cover;
   text-align: center;
   @extend %section-margin;
+
   .section__text--title {
     color: $while-base;
   }
+  
   .section__text--description {
     color: $while-base;
   }

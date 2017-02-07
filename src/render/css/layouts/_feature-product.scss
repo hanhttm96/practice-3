@@ -2,12 +2,22 @@
   background-color: $blue-lighter;
   @extend %section-margin;
   text-align: center;
+  .carousel__moblie {
+    display: none;
+    overflow: hidden;
+  }
+  .feature-menu__desktop {
+    a {
+      font-size: $font-size-main;
+      color: $blue-dark;
+    }
+  }
   .active {
     background-color: $color-info;
   }
 }
 
-.feature-menu__group {
+.feature-menu__mobile{
   display: none;
   overflow: hidden;
 }
@@ -77,6 +87,7 @@
     }
   }
 }
+
 .carousel-custom {
   bottom: -$metric-big-custom;
 }

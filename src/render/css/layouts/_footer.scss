@@ -78,12 +78,11 @@ footer {
       -webkit-flex-wrap: wrap; /* Safari 6.1+ */
       display: flex;   
       flex-wrap: wrap;
-      justify-content: space-between; 
 
       .box-widget {
         @include square(75px);
         background-color: $color-primary-darken;
-        margin-bottom: $top-small;
+        margin: $metric-tiny;
       }
     }
 
@@ -97,6 +96,7 @@ footer {
       &:hover .post__img{
         background-color: $color-info;
         cursor: pointer;
+        
         .icon-plus {
           display: inline-block;
           display: block;
@@ -111,6 +111,19 @@ footer {
     .made-by {
       color: $blue-dark;
       padding-top: $top-small;
+    }
+    .menu-footer {
+      position: relative;
+
+      .nav__category {
+        list-style: none;
+        display: inline-block;
+        margin: $top-small 0 0 $metric-large;
+
+        a:hover {
+          color: $blue-lighter;
+        }
+      }
     }
   }
 }

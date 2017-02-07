@@ -41,6 +41,22 @@ h1, h2, h3 {
 .media-heading {
   text-transform: capitalize;
 }
+
 .clearfix {
   clear: both;
+}
+
+.navbar-toggle {
+  background-color: $color-info;
+  &:focus {
+    background-color: $color-info !important;
+  }
+
+  .icon-bar {
+    background-color: $while-base !important;
+  }
+}
+
+.pagination {
+  margin: $margin-small 0;
 }

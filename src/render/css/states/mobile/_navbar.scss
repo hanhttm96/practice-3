@@ -1,0 +1,21 @@
+@media (max-width: $screen-xs) { 
+ .nav__category {
+    color: $blue-dark;
+    text-transform: capitalize;
+
+    &.contact__sm{
+      display: block;
+    }
+
+    &.search_sm {
+      display: block;
+    }
+  }
+
+  #exampleInputSearch {
+    display: block !important;
+  }
+  .search_sm {
+    display: none !important;
+  }
+}

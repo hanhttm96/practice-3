@@ -4,19 +4,23 @@
   box-sizing: border-box;
   padding: 60px 0;
 }
+
 .purchase-intro {
   position: relative;
 }
+
 .purcahse__box {
   position: relative;
   box-shadow: 1px 1px 5px 1px $btn-default-border;
   text-align: center;
   padding: 50px $margin-medium;
   margin: $section-padding 0;
+
   &:hover .btn__read-more {
     background: $black-base;
     cursor: pointer;
   }
+
   &:hover .hexagon-border{
     .hexagon {
       background: $black-base;
@@ -37,12 +41,14 @@
     left: 40%;
 
   }
+
   .btn__read-more {
     background: $color-info;
     position: absolute;
     bottom: -14px;
     left: 40%;
   }
+  
   .hexagon-border {
     background: $blue-lighter;
     position: relative;

@@ -2,14 +2,17 @@
  .nav__category {
     color: $blue-dark;
     text-transform: capitalize;
+
     &.contact__sm{
       display: none;
     }
-    &.search_sm {
-      display: none;
-    }
-    #exampleInputSearch {
+
+    .search_sm {
       display: block;
     }
+  }
+  
+  #exampleInputSearch {
+    display: none;
   }
 }

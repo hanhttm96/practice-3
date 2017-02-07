@@ -7,16 +7,18 @@ $gray: lighten($black-base, 33.5%); // #555
 $gray-light: lighten($black-base, 46.7%); // #777
 $gray-lighter: lighten($black-base, 93.5%); // #eee
 
-$blue-dark: #4f6168;
-$blue-light: lighten($blue-dark, 30%);
+$blue-dark: #8a9ca9;;
+$blue-light: lighten($blue-dark, 20%);
 $blue-lighter: #eff5f7;
 
-$color-primary:         #2f383d; // #337ab7
+$color-primary: #2f383d; // #337ab7
 $color-primary-light: lighten($color-primary, 20%);
 $color-primary-darken: darken($color-primary, 10%);
-$color-success:         #a0fc1c;
-$color-info:            #21c2f8;
+$color-success: #a0fc1c;
+$color-info: #21c2f8;
 
-$btn-default-color:              #333;
-$btn-default-bg:                 #fff;
-$btn-default-border:             #ccc;
+$btn-default-color: #333;
+$btn-default-bg: #fff;
+$btn-default-border: #ccc;
+
+$color-btn-purchase: #0072a5;

@@ -51,14 +51,14 @@ header
                     each _ in Array(4)
                       li.list-circle
                         a(href='javascript: void(0);')= 'sub menu level 2'
-          li.nav__category.search_sm
-            a(href='javascript: void(0);')= item
+          li.nav__category
+            a.search_sm(href='javascript: void(0);')= item
               span.icon-search
-            input#exampleInputSearch.form-control(type='search', placeholder='Search')
           each contact in ['tranmautritam.com', '+84 984 827 754', 'mr.crazykv']
             li.nav__category.contact__sm
               a(href='javascript: void(0);')= contact
-
+          li.nav__category
+            input#exampleInputSearch.form-control(type='search', placeholder='Search')
           
       // /.navbar-collapse
     // /.container-fluid

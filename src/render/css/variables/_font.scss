@@ -2,14 +2,14 @@
 $font-main: 'Lato', sans-serif;
 
 $ont-size-tiny: 10px;
-$font-size-main: 14px;
+$font-size-main: 13px;
 $font-size-sixteen: 16px;
 $font-size-large: ceil(($font-size-main * 2.8)); // ~40px
 $font-size-small: ceil(($font-size-main * 0.85)); // ~12px
 $font-size-medium: ceil(($font-size-main * 1.8));// 26px
 
-$font-h2:            floor(($font-size-main * 2.15)); // ~30px
-$font-h3:            ceil(($font-size-main * 1.7)); // ~24px
+$font-h2: floor(($font-size-main * 2.15)); // ~30px
+$font-h3: ceil(($font-size-main * 1.7)); // ~24px
 
 $font-weight-tiny: 300;
 $font-weight-small: 400;
