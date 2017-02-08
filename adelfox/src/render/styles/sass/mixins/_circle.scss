@@ -1,6 +1,0 @@
-@mixin circle($radius, $color) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-  background: $color;
-}

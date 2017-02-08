@@ -1,0 +1,13 @@
+@media (min-width: $screen-xs) and (max-width:  $screen-sm){ 
+  .purchase__mobile {
+    text-align: center;
+  }
+  .feature-menu__mobile {
+    display: block;
+    margin-bottom: $metric-medium;
+  }
+
+  .feature-menu__desktop {
+  	display: none;
+  }
+}

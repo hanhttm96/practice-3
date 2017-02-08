@@ -1,4 +1,10 @@
-@media (max-width: $screen-xs) { 
+@media (min-width: $screen-xs) and (max-width:  $screen-sm){ 
+  .purchase__mobile {
+    text-align: center;
+  }
+}
+
+@media (max-width: $screen-xs){ 
   .purchase__mobile {
     text-align: center;
   }

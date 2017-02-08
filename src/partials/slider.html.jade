@@ -12,7 +12,7 @@ section.slider-banner
           li(data-target="#carousel-example-generic", data-slide-to= i)
 
     // Wrapper for slides
-    .carousel-inner(role='listbox')
+    .carousel-inner.inner_mobile(role='listbox')
       each item, i in images
         if i == 0
           .item.active

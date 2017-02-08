@@ -60,3 +60,9 @@ h1, h2, h3 {
 .pagination {
   margin: $margin-small 0;
 }
+
+@media (max-width: $screen-xs - 1){ 
+  body {
+    width: 320px;
+  }
+}

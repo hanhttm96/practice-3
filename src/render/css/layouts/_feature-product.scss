@@ -36,7 +36,7 @@
 .box__item {
   position: relative;
   @include size (100%, 230px);
-  background-color: $gray-light;
+  background-color: $blue-light;
   margin: $border-radius-small 0;
   &:hover .hv-box_item{
     display: block;

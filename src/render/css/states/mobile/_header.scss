@@ -1,5 +1,17 @@
-@media (max-width: $screen-xs) { 
+@media (min-width: $screen-xs) and (max-width:  $screen-sm){ 
   .header-top {
     display: none;
+  }
+  .logo__text {
+    font-size: $font-size-medium !important;
+  }
+}
+
+@media (max-width: $screen-xs){ 
+  .header-top {
+    display: none;
+  }
+  .logo__text {
+    font-size: $font-size-medium !important;
   }
 }

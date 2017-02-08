@@ -3,7 +3,7 @@
 # http://docpad.org/docs/config
 # Define the DocPad Configuration
 docpadConfig = {
-  port: 8888
+  port: 8889
   watchOptions:
     preferredMethods: ['watchFile', 'watch']
     catchupDelay: 0

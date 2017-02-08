@@ -1,55 +1,65 @@
-@media (max-width: $screen-sm) { 
+@media (min-width: $screen-md +1)and (max-width:  $screen-lg) { 
+  .logo__text {
+    font-size: $font-size-medium !important;
+  }
+   .inner_mobile {
+    height: 250px;
+    .item .img__slider {
+      width: 100%;
+      height: 250px !important;
+    }
+  }
   .banner__content {
     color: $while-base;
     text-align: center;
-    margin-top: $metric-small;
+    margin-top: 50px;
     
     .amazing {
-      font-size: $font-size-main;
+      font-size: 20px;
       font-weight: $font-weight-tiny;
       text-transform: uppercase;
-      margin: $metric-tiny;
+      margin: 0;
     }
 
     .best {
-      font-size: $font-h3;
+      font-size: 20px;
       font-weight: $font-weight-large;
       text-transform: uppercase;
-      margin: $metric-tiny;
+      margin: 0;
     }
 
     .design {
-      font-size: $font-size-sixteen;
+      font-size: 15px;
       font-weight: $font-weight-tiny;
       text-transform: capitalize;
-      margin: $metric-tiny;
+      margin: 0;
     }
   }
   .member {
     position: relative;
-    bottom: -$metric-tiny;
+    bottom: 25px;
   }
 
   .banner {
     position: absolute;
-    top: 0;
+    top: 30px !important;
     color: $while-base;
-    margin-left: 0;
+    margin-left: 0 !important;
   }
   .banner__purchase {
     text-align: center;
     .btn-group {
-      margin: 2px;
+      margin: 1px;
     }
     .btn {
-      padding: 0 $metric-small;
+      padding: 0 $metric-tiny;
     }
     .button {
       background-color: $color-primary;
       border-color: $btn-default-color;
-      height: 60px;
+      height: 40px;
       .btn__icon {
-        font-size: 50px;
+        font-size: $metric-medium;
       }
       .icon-cube {
         color: $color-info;
@@ -59,15 +69,15 @@
       }
       .title {
         text-transform: uppercase;
-        font-size: $metric-medium;
+        font-size: 13px;
         font-weight: 700;
         margin: 0;
       }
       .description {
-        font-size: $metric-medium;
+        font-size: 13px;
         margin: 0;
         padding-top: 0;
       }
     }
-  } 
+  }  
 }

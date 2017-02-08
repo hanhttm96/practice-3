@@ -1,5 +1,0 @@
-@mixin iconfont-classes ($class-name, $variable-font) {
-  .icon-#{$class-name}:before {
-    content: $variable-font;
-  }
-}

@@ -1,0 +1,20 @@
+{
+  "name": "no",
+  "description": ".",
+  "main": "node_modules/.bin/docpad-server",
+  "authors": [
+    "Hanh Tran <hanh.tran@asnet.com.vn>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "compass-sass-mixins": "*"
+  }
+}

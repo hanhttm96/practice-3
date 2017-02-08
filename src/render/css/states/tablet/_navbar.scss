@@ -1,18 +1,30 @@
-@media (max-width: $screen-sm) { 
- .nav__category {
+@media (min-width: $screen-sm +1)and (max-width:  $screen-md) { 
+  header{
+    .navbar-collapse {
+      margin-top: 20px;
+    }
+    .nav {
+      float: left;
+      width: 100%;
+    }
+  }
+  .nav__category {
     color: $blue-dark;
     text-transform: capitalize;
 
     &.contact__sm{
-      display: none;
+      display: block;
     }
 
-    .search_sm {
+    &.search_sm {
       display: block;
     }
   }
-  
+
   #exampleInputSearch {
-    display: none;
+    display: block !important;
+  }
+  .search_sm {
+    display: none !important;
   }
 }

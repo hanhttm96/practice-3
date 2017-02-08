@@ -14,11 +14,18 @@
 * [Homepage](http://compass-style.org/)
 
 
+**Bootstrap**
+
+* Bootstrap is an open-source CSS Framework.
+* [Homepage](http://getbootstrap.com/)
+
 **jQuery**
 
 * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
 * [Homepage](http://jquery.com/)
 
+### Vagrant - the command line utility for managing the lifecycle of virtual machines.
+* [Homepage](https://www.vagrantup.com/docs/)
 
 ## Development Setup
 
@@ -40,90 +47,13 @@
 
 **To build webapp first time, run commandline:**
 
+* $ vagrant reload
+* $ vagrant ssh
+* $ vagrant cd /vagrant
+* $ docpad install
 * $ docpad run
 
 
-**Open browsers and run localhost port 8888 is default**
+**Open browsers and run localhost port 8889 is default**
 
-* Open link on browsers: http://locahost:8888
-
-**src**
-## Make docpad project with jade and sass
-> Font
-
-- 'Lato', sans-serif;
-
-> Folder
-
-```
-├── feature/practice-comp-jade/
-│   ├── docpad.coffee
-│   ├── node_modules/
-│   ├── out/
-│   ├── package.json
-│   ├── README.md
-│   └── src/
-│     ├── layouts/
-│     │   ├── default.html.jade
-│     ├── partials 
-│     │   ├── header.html.jade
-│     │   ├── slider.html.jade
-│     │   ├── feature-product.html.jade
-│     │   ├── mobile-device.html.jade
-│     │   ├── new.html.jade
-│     │   ├── about-us.html.jade
-│     │   └── difference.html.jade
-│     ├── render 
-│     │   ├── index.html.jade
-│     │   └──css/
-│     │      ├── abstracts
-│     │      │   ├── _all.scss
-│     │      │   ├── _mixin.scss
-│     │      │   └── _placeholder.scss
-│     │      ├── base/
-│     │      │   ├── _base.scss
-│     │      │   └── _reset.scss
-│     │      ├── components/
-│     │      │   ├── _all.scss
-│     │      │   └── _button.scss
-│     │      ├── layouts/
-│     │      │   ├── _all.scss
-│     │      │   ├── _header.scss
-│     │      │   ├── _navbar.scss
-│     │      │   ├── _slider.scss
-│     │      │   ├── _feature-product.scss
-│     │      │   ├── _mobile-device.scss
-│     │      │   ├── _new.scss
-│     │      │   ├── _about-us.scss
-│     │      │   ├── _difference.scss
-│     │      │   └── _footer.scss
-│     │      ├── variables/
-│     │      │   ├── _all.scss
-│     │      │   ├── _color.scss
-│     │      │   ├── _font.scss
-│     │      │   └── _metric.scss
-│     │      ├── vendor
-│     │	     │   ├── sass/
-│     │      │   │   ├── styles.scss
-│     │      │   │   └── _bootstrap-variables.scss
-│     │	     │   ├── stylesheets
-│     │      │   │   └── bootstrap/
-│     │      │   │      └── mixins/
-│     │      │   ├── config.rb
-│     │      │   ├── _style.scss
-│     │      │   └── _variables.scss
-│     │      ├── core.css.scss 
-│     │      └── main.css.scss
-│     └── static/
-│         ├── fonts
-│         ├── icon-font
-│         ├── js
-│         └── images
-└── README.md
-```
-
-
-
-
-
-
+* Open link on browsers: http://127.0.0.1:8889/
