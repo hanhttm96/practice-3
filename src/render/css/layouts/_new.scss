@@ -12,8 +12,13 @@
       @include square(140px);
       &:hover {
         border-top: solid 5px $color-primary-darken;
+       
         .day{
           background-color: $color-primary-darken;
+          -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+          animation-name: hover-animation;
+          animation-duration: 1s;
         }
       }
     }

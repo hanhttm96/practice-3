@@ -2,10 +2,16 @@
   .menu-footer {
     display: none !important;
   }
+  .made-by {
+    text-align: center;
+  }
 }
 
 @media (max-width: $screen-xs){ 
   .menu-footer {
     display: none !important;
+  }
+  .made-by {
+    text-align: center;
   }
 }

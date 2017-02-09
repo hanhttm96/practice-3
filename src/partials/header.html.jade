@@ -48,7 +48,8 @@ header
                 .col-md-6
                   ul.sub-level2
                     p feature 2
-                    each _ in Array(4)
+                    //- array print 4 li tag
+                    each _ in Array(4) 
                       li.list-circle
                         a(href='javascript: void(0);')= 'sub menu level 2'
           li.nav__category
@@ -59,6 +60,5 @@ header
               a(href='javascript: void(0);')= contact
           li.nav__category
             input#exampleInputSearch.form-control(type='search', placeholder='Search')
-          
       // /.navbar-collapse
     // /.container-fluid

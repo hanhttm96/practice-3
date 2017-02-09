@@ -17,14 +17,18 @@
   .img__slider {
     width: 100%;
     max-height: 500px;
+    display: block;
   }
+}
+
+.img__slider--small {
+  display: none;
 }
 
 .banner {
   position: absolute;
   top: $metric-horizontal;
   color: $while-base;
-  margin-left: $padding-large-horizontal;
 }
 
 .banner__content {

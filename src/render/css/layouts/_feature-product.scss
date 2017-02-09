@@ -16,7 +16,7 @@
     background-color: $color-info;
   }
 }
-
+//Display at screen from 320px to 768px
 .feature-menu__mobile{
   display: none;
   overflow: hidden;
@@ -38,8 +38,13 @@
   @include size (100%, 230px);
   background-color: $blue-light;
   margin: $border-radius-small 0;
-  &:hover .hv-box_item{
+
+  &:hover .hv-box_item {
     display: block;
+    -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: hover-animation;
+    animation-duration: 1s;
   }
 
   .hv-box_item {
@@ -47,7 +52,7 @@
     background: $color-info;
     @include square(100%);
     display: none;
-
+    
     .more-view {
       padding: $margin-medium 0;
       text-align: center;
@@ -64,6 +69,7 @@
       }
     }
   }
+  //up arrow for div top
   .up-arrow {
     display: inline-block;
     position: relative;
@@ -76,7 +82,7 @@
       content: '';
       display: block;  
       position: absolute;
-      left: 48%;
+      left: 45%;
       bottom: 100%;
       width: 0;
       height: 0;

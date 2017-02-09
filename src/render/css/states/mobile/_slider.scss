@@ -1,9 +1,18 @@
 @media (min-width: $screen-xs) and (max-width:  $screen-sm){ 
+  .img__slider--small {
+    display: block !important;
+    width: 100%;
+  }
+  .item {
+    .img__slider {
+      display: none;
+    }
+  }
   .inner_mobile {
-    height: 150px;
+    height: 200px;
     .item .img__slider {
       width: 100%;
-      height: 150px !important;
+      height: 200px !important;
     }
   }
   .banner__content {
@@ -41,7 +50,6 @@
     position: absolute;
     top: 0;
     color: $while-base;
-    margin-left: 0 !important;
   }
   .banner__purchase {
     text-align: center;
@@ -80,6 +88,7 @@
 }
 
 @media (min-width: $screen-sm +1)and (max-width:  $screen-md) { 
+
   .inner_mobile {
     height: 250px;
     .item .img__slider {
@@ -91,7 +100,6 @@
     color: $while-base;
     text-align: center;
     margin-top: 50px;
-    
     .amazing {
       font-size: 20px;
       font-weight: $font-weight-tiny;
@@ -120,37 +128,46 @@
 
   .banner {
     position: absolute;
-    top: 30px !important;
+    top: 5px !important;
     color: $while-base;
-    margin-left: 0 !important;
+    width: 96%;
   }
+
   .banner__purchase {
     text-align: center;
+
     .btn-group {
       margin: 1px;
     }
+
     .btn {
       padding: 0 $metric-tiny;
     }
+
     .button {
       background-color: $color-primary;
       border-color: $btn-default-color;
       height: 40px;
+
       .btn__icon {
         font-size: $metric-medium;
       }
+
       .icon-cube {
         color: $color-info;
       }
+
       .icon-lamp {
         color: $color-success;
       }
+
       .title {
         text-transform: uppercase;
         font-size: 13px;
         font-weight: 700;
         margin: 0;
       }
+
       .description {
         font-size: 13px;
         margin: 0;
@@ -161,6 +178,16 @@
 }
 
 @media (max-width: $screen-xs){ 
+  .img__slider--small {
+    display: block !important;
+    width: 100%;
+  }
+  .item {
+    .img__slider {
+      display: none;
+    }
+  }
+
   .feature-menu__mobile {
     display: block;
     margin-bottom: $metric-medium;
@@ -169,13 +196,16 @@
   .feature-menu__desktop {
   	display: none;
   }
+
   .inner_mobile {
-    height: 150px;
+    height: 165px;
+
     .item .img__slider {
       width: 100%;
-      height: 150px !important;
+      height: 165px !important;
     }
   }
+
   .banner__content {
     color: $while-base;
     text-align: center;
@@ -202,6 +232,7 @@
       margin: 0;
     }
   }
+
   .member {
     position: relative;
     bottom: -36px;
@@ -211,35 +242,43 @@
     position: absolute;
     top: 0;
     color: $while-base;
-    margin-left: 0 !important;
   }
+
   .banner__purchase {
     text-align: center;
+
     .btn-group {
       margin: 1px;
     }
+
     .btn {
       padding: 0 $metric-tiny;
     }
+
     .button {
       background-color: $color-primary;
       border-color: $btn-default-color;
       height: $metric-large;
+
       .btn__icon {
         font-size: $metric-medium;
       }
+
       .icon-cube {
         color: $color-info;
       }
+
       .icon-lamp {
         color: $color-success;
       }
+
       .title {
         text-transform: uppercase;
         font-size: $ont-size-tiny;
         font-weight: 700;
         margin: 0;
       }
+
       .description {
         font-size: $ont-size-tiny;
         margin: 0;

@@ -7,6 +7,7 @@
 
 .purchase-intro {
   position: relative;
+  @extend %section-margin;
 }
 
 .purcahse__box {
@@ -14,23 +15,38 @@
   box-shadow: 1px 1px 5px 1px $btn-default-border;
   text-align: center;
   padding: 50px $margin-medium;
-  margin: $section-padding 0;
+  margin: 40px 0;
 
   &:hover .btn__read-more {
     background: $black-base;
     cursor: pointer;
+    -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: hover-animation;
+    animation-duration: 1s;
   }
 
   &:hover .hexagon-border{
     .hexagon {
       background: $black-base;
-
+      -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+      animation-name: hover-animation;
+      animation-duration: 1s;
       &:before {
         border-bottom: $top-small solid $black-base;
+        -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        animation-name: hover-animation;
+        animation-duration: 1s;
       }
 
       &:after {
         border-top: $top-small solid $black-base;
+        -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        animation-name: hover-animation;
+        animation-duration: 1s;
       }
     }
   }

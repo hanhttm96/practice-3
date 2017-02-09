@@ -1,4 +1,4 @@
-- var images = [{imageBg: 'bg-slider.jpg', member: 'member.png'},{imageBg: 'bg-slider.jpg', member: 'member.png'}, {imageBg: 'bg-slider.jpg', member: 'member.png'},{imageBg: 'bg-slider.jpg', member: 'member.png'}]
+- var images = [{imageBg: 'bg-slider.jpg', imageBgSmall: 'bg-slider-small.jpg'},{imageBg: 'bg-slider.jpg', imageBgSmall: 'bg-slider-small.jpg'}, {imageBg: 'bg-slider.jpg', imageBgSmall: 'bg-slider-small.jpg'},{imageBg: 'bg-slider.jpg', imageBgSmall: 'bg-slider-small.jpg'}]
 - var images_url = ["images/sliders/"]
 section.slider-banner
   #carousel-example-generic.carousel.slide(data-ride='carousel')
@@ -17,9 +17,11 @@ section.slider-banner
         if i == 0
           .item.active
             img.img-responsive.img__slider(src= images_url + item.imageBg, alt= item)
+            img.img-responsive.img__slider--small(src= images_url + item.imageBgSmall, alt= item)
         else
           .item
             img.img-responsive.img__slider(src= images_url + item.imageBg, alt= item)
+            img.img-responsive.img__slider--small(src= images_url + item.imageBgSmall, alt= item)
             // Controls
     a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
       span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -30,7 +32,8 @@ section.slider-banner
   .container 
     .banner
       .row 
-        .col-md-7.col-sm-8.col-xs-7
+        .col-sm-1
+        .col-md-12.col-sm-6.col-xs-7
           .banner__content
             p.amazing amazing theme
             p.best adelfox is the best
@@ -50,6 +53,4 @@ section.slider-banner
                   p.description Exflore now
                 button.btn.button(type='button')
                   span.icon-lamp.btn__icon
-        .col-md-5.col-sm-4.col-xs-5
-          .member
-            img.img-responsive.img__member(src="images/sliders/member.png", alt="")
+        .col-sm-6.col-xs-5

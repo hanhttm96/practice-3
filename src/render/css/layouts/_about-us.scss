@@ -48,7 +48,7 @@
     height: $section-padding;
     
     .logo-effect {
-      filter: grayscale(100%);
+      filter: grayscale(100%); // grayscale for image hover color
       cursor: pointer;
       &:hover {
         filter: grayscale(0);

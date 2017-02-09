@@ -1,6 +1,5 @@
-
+//section footer
 footer {
-  
   .footer-top {
     position: relative;
     background-color: $color-primary;
@@ -91,11 +90,19 @@ footer {
 
       &:hover .post__img--capt {
         color: $blue-lighter;
+        -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        animation-name: hover-animation;
+        animation-duration: 1s;
       }
 
       &:hover .post__img{
         background-color: $color-info;
         cursor: pointer;
+        -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+        animation-name: hover-animation;
+        animation-duration: 1s;
         
         .icon-plus {
           display: inline-block;

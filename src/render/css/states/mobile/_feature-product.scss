@@ -10,4 +10,20 @@
   .feature-menu__desktop {
   	display: none;
   }
+  .box__item {
+    height: 125px;
+    .more-view {
+      padding: 15px 0 !important;
+       .more-view__item {
+         width: 25px !important;
+         height: 25px !important;
+       }
+    }
+    .up-arrow {
+      height: 53px !important;
+      .object {
+        margin-top: 5px !important;
+      }
+    }
+  }
 }

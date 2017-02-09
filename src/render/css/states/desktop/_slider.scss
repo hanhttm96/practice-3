@@ -21,11 +21,17 @@
     }
   }
 
+  .inner_mobile {
+    height: 500px;
+    .item .img__slider {
+      width: 100%;
+      height: 500px !important;
+    }
+  }
   .banner {
     position: absolute;
-    top: $metric-horizontal;
+    top: 110px;
     color: $while-base;
-    margin-left: $padding-large-horizontal;
   }
 
   .banner__content {
@@ -67,7 +73,7 @@
     .button {
       background-color: $color-primary;
       border-color: $btn-default-color;
-      height: $metric-big-custom;
+      height: 56px;
 
       .btn__icon {
         font-size: $font-size-large;
@@ -95,10 +101,12 @@
 
       .btn__name--left {
         text-align: left;
+        margin-top: -8px;
       }
 
       .btn__name--right {
         text-align: right;
+        margin-top: -8px;
       }
     }
   }

@@ -2,10 +2,16 @@
   .purchase__mobile {
     text-align: center;
   }
+  .purcahse__box {
+    margin: 80px 0;
+  }
 }
 
 @media (max-width: $screen-xs){ 
   .purchase__mobile {
     text-align: center;
+  }
+  .purcahse__box {
+    margin: 60px 0;
   }
 }

@@ -23,7 +23,8 @@ footer
         .col-md-3.col-sm-6
           p.object recent post
           br
-          - for (var i=1; i<4; i++) {
+          //- loop for print to 3 div media
+          - for (var i=1; i<4; i++) { 
             .media.media__footer-custom
               .media-left
                 .post__img
@@ -48,9 +49,9 @@ footer
   .footer-bottom
     .container
       .row
-        .col-md-4
+        .col-md-4.col-sm-4.col-xs-12
           p.made-by Coppyright &copy; 2013 - Design by tranmautritam 
-        .col-md-8
+        .col-md-8.col-sm-8
           ul.menu-footer.pull-right
             each item in ['home', 'pages', 'portfilio', 'shop', 'blog', 'shortcodes', 'feature']
               li.nav__category
