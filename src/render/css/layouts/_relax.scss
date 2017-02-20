@@ -1,0 +1,57 @@
+.relax {
+  background-color: $blue-dark;
+  color: $while;
+  margin: 100px 0;
+  padding-bottom: 100px;
+  position: relative;
+
+  .icon-docs {
+    @include sprite-background('/images/icon-section.png');
+    @include square(45px);
+    @include sprite-column(4, 45px, 0);
+    margin: 0 $metric-medium;
+  }
+}
+
+//section post-images
+.post-images {
+  position: relative;
+}
+
+.slide-desktop {
+  display: none;
+}
+
+.media-left {
+  position: relative;
+}
+
+.image-post {
+  position: relative;
+
+  .media-object {
+    @include square(170px);
+  }
+  .text-day {
+    margin-bottom: 35px;
+  }
+  .icon-post {
+    position: absolute;
+    @include square(30px);
+    background: $feature-black;
+    color: $while;
+    top: 0;
+    display: flex;
+    .item-icon {
+      margin: 9px 0 0 8px;
+    }
+  }
+  
+}
+
+.text-left {
+  text-align: left;
+  border-bottom-style: double;
+  border-color: #cccccc;
+  line-height: 65px;
+}

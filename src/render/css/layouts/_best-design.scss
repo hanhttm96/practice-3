@@ -1,0 +1,19 @@
+.wrap-title {
+  text-align: center;
+  font-size: 14px;
+  margin: $margin-section 0;
+}
+.wrap-icon {
+  display: flex;
+  justify-content: center;
+  .icon-sun {
+    @include sprite-background('/images/icon-section.png');
+    @include size(37px, 45px);
+    @include sprite-column(1, 45px, 0);
+    margin: 0 $metric-medium;
+  }
+}
+
+.passage {
+  color: $gray-text;
+}

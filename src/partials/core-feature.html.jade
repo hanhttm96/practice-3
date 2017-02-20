@@ -1,0 +1,39 @@
+- var icon_feature_left = [{colors: 'blue', icon:'icon-display'}, {colors: 'red', icon: 'icon-lamp'}, {colors: 'black', icon: 'icon-language'}, {colors: 'pink', icon: 'icon-ribbon'}]
+- var icon_feature_right = [{colors: 'green', icon: 'icon-image'}, {colors: 'gray', icon: 'icon-atom'}, {colors: 'violet', icon: 'icon-params'}, {colors: 'green-light', icon: 'icon-documents'}]
+section.core-feature
+  .container
+    .wrap-title
+      p.section__text--title core features of the 
+        span.color-thefox mag 
+      p.section__text--description tincidunt pulvinar augue est sagittis leo
+      .wrap-icon
+        .horizontal-stripes
+        .icon-pen
+        .horizontal-stripes
+    .row
+      .feature-left.col-md-6
+        each item in icon_feature_left
+          .media
+            .media-left.box-left
+              .media-object(class='#{item.colors}')
+                span.icon-feature(class='#{item.icon}')
+            .media-body.text-right
+              h3.media-heading.heading  Lorem ipsum dolor sit amet
+              h4.sub-heading sub title here
+              p.passage  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odit distinctio quo quaerat culpa atque, modi nisi odio minus rem repellendus qui illum quibusdam a molestiae
+            // >=1024px display
+            .media-right
+              .media-object(class='#{item.colors}')
+                span.icon-feature(class='#{item.icon}')
+
+      .feature-right.col-md-6
+        each item in icon_feature_right
+          .media
+            .media-left
+              .media-object(class='#{item.colors}')
+                span.icon-feature(class='#{item.icon}')
+            .media-body
+              h3.media-heading.heading  Lorem ipsum dolor sit amet
+              h4.sub-heading sub title here
+              p.passage  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odit distinctio quo quaerat culpa atque, modi nisi odio minus rem repellendus qui illum quibusdam a molestiae
+            

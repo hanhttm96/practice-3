@@ -1,16 +1,39 @@
-@media (min-width: $screen-sm +1)and (max-width:  $screen-md) { 
+@media (min-width: $screen-md)and (max-width:  $screen-lg) { 
   .header-top {
+    @include size (100%, 650px);
+    .wrap-header-top {
+      padding: 200px 0;
+    }
+    .header-title {
+      font-size: $font-size-main;
+    }
+    .main-title {
+      font-size: $font-size-large;
+      margin: $metric-medium 0;
+    }
+    .btn-purchase {
+      font-size: $font-size-medium;
+      @include size(200px, 45px);
+      margin-top: $metric-big;
+    }
+  }
+
+  #exampleInputSearch {
     display: none;
   }
 
-  .nav.navbar-nav {
-    display: block !important;
+  .serch-menu {
+    display: block;
   }
 
-  .nav {
-    float: left;
+  .color-active {
+    color: $green !important;
+    background-color: transparent !important;
   }
-  .logo__text {
-    font-size: $font-size-medium !important;
+  .category {
+    font-size: 12px;
+  }
+  .navbar-brand {
+    margin: 13px 0;
   }
 }

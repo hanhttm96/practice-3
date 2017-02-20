@@ -1,0 +1,50 @@
+@media (min-width: $screen-lg){ 
+  .header-top {
+    @include size (100%, 1282px);
+    .wrap-header-top {
+      padding: 528px 0;
+    }
+    .header-title {
+      font-size: 16px;
+    }
+    .main-title {
+      font-size: 54px;
+      margin: $metric-medium 0;
+    }
+    .btn-purchase {
+      font-size: 18px;
+      @include size(228px, 60px);
+      margin-top: $metric-big;
+    }
+  }
+
+  #exampleInputSearch {
+    display: none;
+  }
+
+  .serch-menu {
+    display: block;
+  }
+
+  .color-active {
+    color: $green !important;
+    background-color: transparent !important;
+  }
+
+  .category {
+    margin: 0;
+  }
+
+  .navbar {
+    &-nav {
+      margin: 18.5px 0;
+    }
+
+    &-brand {
+      margin: 20px 0;
+      height: 45px;
+      padding: 12px 0 12px 50px;
+      font-size: 36px;
+    }
+  }
+}

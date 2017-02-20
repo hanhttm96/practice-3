@@ -1,0 +1,91 @@
+- var images_relax = ['new.jpg', 'persion.jpg', 'listen.jpg', 'imagine.png']
+- var images_url_relax = ["images/relax/"]
+- var images_food = [{img:'rice.jpg', icon: 'icon-image'}, {img: 'egg.jpg', icon: 'icon-star-half-empty'}, {img: 'meat.jpg', icon: 'icon-documents'}]
+- var images_url_food = ["images/food/"]
+section.relax
+  .container
+    .wrap-title
+      p.section__text--title blog/news/magazine
+      p.section__text--description great style for simple blog
+      .wrap-icon
+        .horizontal-stripes
+        .icon-docs
+        .horizontal-stripes
+  .container-fluid
+    .row
+      each item in images_relax
+        .col-md-3.col-sm-6
+          .wrap-food
+            img.img-responsive.img__slider(src= images_url_relax + item, alt= item)
+            .caption
+              h3.heading this is your work title
+              h4.sub-heading add category
+              p.passage  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis harum explicabo quod unde, molestiae earum incidunt temporibus sunt maiores recusandae eos enim repellat amet a omnis cum facilis accusamus tempore.
+            .wrap-intro-hover
+              .link
+                a(href="javascript: void(0);")
+                  span.icon-hyperlink
+              .search
+                a(href="javascript: void(0);")
+                  span.icon-search
+
+       ol.carousel-indicators.indicators-cus-left
+        each item, i in images_relax
+          if i == 0
+            li(data-target="#carousel-example-generic", data-slide-to= i).active
+          else
+            li(data-target="#carousel-example-generic", data-slide-to= i)
+section.post-images
+  .container
+    .row
+      .col-md-6.slide-desktop
+        .wrap-title
+          p.section__text--title.text-left slideshow post
+        .slide-post
+          .capt-slide
+            .capt
+              h3.media-heading.heading  this is your blog title here
+              h4.sub-heading.text-day 27th july 2016 | wordpress | admin
+            .navigate-icon
+              a(href='javascript: void (0);')
+                span.icon-navigate_before
+            .navigate-icon
+              a(href='javascript: void (0);')
+                span.icon-navigate_next
+      .col-md-6
+        .image-post
+          .wrap-title
+            p.section__text--title.text-left post with small image
+          each item in images_food
+            .media
+              .media-left
+                a(href='javascript: void (0);')
+                  img.media-object.img__slider(src= images_url_food + item.img, alt= item)
+                .icon-post
+                  span.item-icon(class= '#{item.icon}')
+              .media-body
+                h3.media-heading.heading  this is your blog title here
+                h4.sub-heading.text-day 27th july 2016 | wordpress | admin
+                p.passage   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum enim, placeat eveniet doloribus aliquid. Quia dolores, quasi vel dolorem praesentium cum nemo aspernatur nesciunt dolorum, maiores, incidunt laboriosam tenetur. Tempore?
+section.post-images
+  .container
+    .wrap-title
+      p.section__text--title.text-left latest news
+    .row
+       each item in images_food
+        .col-md-4.col-sm-6
+          .wrap-food
+            img.img-responsive.img__slider(src= images_url_food + item.img, alt= item)
+            .caption
+              h3.heading this is your work title
+              h4.sub-heading add category
+              p.passage  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis harum explicabo quod unde, molestiae earum incidunt temporibus sunt maiores recusandae eos enim repellat amet a omnis cum facilis accusamus tempore.
+            .wrap-intro-hover
+              .search
+                a(href="javascript: void(0);")
+                  span.icon-search
+              .link
+                a(href="javascript: void(0);")
+                  span.icon-navigate_next
+              
+

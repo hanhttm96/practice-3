@@ -1,0 +1,13 @@
+@media (min-width: $screen-lg){ 
+  .box-left {
+    display: none;
+  }
+  
+  .media-right {
+    display: table-cell;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+}

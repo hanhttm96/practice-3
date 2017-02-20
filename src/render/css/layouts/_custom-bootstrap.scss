@@ -1,70 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 body {
   font-family: $font-main;
-  font-size: $font-size-main;
+  font-size: 14px;
+}
+@media (max-width: $screen-xs) { 
+  body {
+    width: $screen-xs;
+  }
+}
+
+h1, h2 ,h3, h4 {
+  text-transform: uppercase;
 }
 
 a {
-  text-decoration: none;
   &:hover {
-    text-decoration: none
+    text-decoration: none;
   }
-}
-
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.nav {
-  float: right;
-}
-
-.navbar-default {
-  background-color:$while-base;
-  border-color: $gray-lighter; 
-  box-shadow: 1px 1px 5px 1px $gray-lighter;
-  border-radius: 0;
-  padding: $metric-medium 0;
-  margin:0;
-}
-
-h1, h2, h3 {
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: $metric-large;
-}
-
-.media-heading {
-  text-transform: capitalize;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.navbar-toggle {
-  background-color: $color-info;
   &:focus {
-    background-color: $color-info !important;
-  }
-
-  .icon-bar {
-    background-color: $while-base !important;
+    text-decoration: none;
   }
 }
 
-.pagination {
-  margin: $margin-small 0;
-}
+.navbar {
+  border-radius: 0;
 
-@media (max-width: $screen-xs - 1){ 
-  body {
-    width: 320px;
+  &-nav {
+    margin: 7.5px 0;
+  }
+
+  &-default {
+    background-color: $while;
+    border-color: transparent;
+    box-shadow: 1px 1px 5px 1px #ccc;
+  }
+  
+  &-brand {
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 7px 0;
+    height: 35px;
+    padding: 7px 40px;
+    font-size: 26px;
   }
 }
+
+.media {
+  margin-bottom: 30px;
+  &-left {
+    padding-right: 20px;
+  }
+
+  &-right {
+    padding-left: 20px;
+  }
+}
+

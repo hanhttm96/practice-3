@@ -1,0 +1,86 @@
+.special-product {
+  .icon-flower {
+    @include sprite-background('/images/icon-section.png');
+    @include square(45px);
+    @include sprite-column(2, 45px, 0);
+    margin: 0 $metric-medium;
+  }
+
+  .glyphicon {
+    position: absolute;
+    font-size: 15px;
+    @include square (28px);
+    padding-top: 7px;
+    background: #555761;
+    &:hover {
+      background: $green;
+    }
+    &.glyphicon-chevron-left {
+      left: 10px;
+    }
+
+    &.glyphicon-chevron-right {
+      right: 10px;
+    } 
+  }
+}
+
+.wrap-intro-hover {
+  position: absolute;
+  visibility: hidden;
+  top: 25%;
+  left: 38%;
+  display: flex;
+  font-size: 18px;
+
+  .link {
+    @include square (42px);
+    border-radius: 50%;
+    background: $while;
+    margin-right: 10px;
+    .icon-hyperlink {
+      position: relative;
+      top: 22%;
+      left: 28%;
+      color: $blue-dark;
+    }
+  }
+
+  .search {
+    @include square (42px);
+    border-radius: 50%;
+    background: transparent;
+    border: solid 2px $while;
+    .icon-search {
+      position: relative;
+      top: 22%;
+      left: 28%;
+      color: $while; 
+    }
+  }
+}
+
+.wrap-food {
+  position: relative;
+
+  &:hover {
+    .wrap-intro-hover{
+      visibility: visible;
+      @extend %hover-effect;
+    }
+    .img__slider {
+      opacity: 0.5;
+    }
+  }
+}
+
+.special-intro {
+  background-color: $gray;
+  color: $while;
+  text-align: center;
+  padding: 100px 0;
+  margin: 100px 0 0 0;
+  .special-text {
+    font-size: 24px;
+  }
+}

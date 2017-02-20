@@ -1,21 +1,20 @@
 // 
-$black-base: #000;
-$while-base: #fff;
-$gray-light: lighten($black-base, 46.7%); // #777
-$gray-lighter: lighten($black-base, 93.5%); // #eee
+$while: #ffffff;
+$brown: #6d5d68;
+$green: #1abc9c;
+$yellow: #ffb400;
+$blue: #00bff3;
+$pink: #bc2a83;
+$gray: #88898f;
 
-$blue-dark: #8a9ca9;;
-$blue-light: lighten($blue-dark, 20%);
-$blue-lighter: #eff5f7;
+$feature-black: #222533;
+$feature-blue: darken(#d5e4ef, 50%);
+$feature-green: darken(#bceae1, 50%);
+$feature-gray: darken(#d7dee0, 50%);
+$feature-red: darken(#f7d7d7, 50%);
+$feature-violet: darken(#e7d9fd, 50%);
+$feature-pink: darken(#eedce4, 50%);
+$feature-green-light: darken(#def0bf, 50%);
 
-$color-primary: #2f383d; // #337ab7
-$color-primary-light: lighten($color-primary, 20%);
-$color-primary-darken: darken($color-primary, 10%);
-$color-success: #a0fc1c;
-$color-info: #21c2f8;
-
-$btn-default-color: #333;
-$btn-default-bg: #fff;
-$btn-default-border: #ccc;
-
-$color-btn-purchase: #0072a5;
+$gray-text: #a1b1bc;
+$blue-dark: #1a1c27;

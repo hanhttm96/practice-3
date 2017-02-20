@@ -1,37 +1,49 @@
 //code here
-%li-inline-none {
-  display: inline-block;
-  list-style: none;
+.clear {
+  clear: both;
 }
 
-%icon-style {
-  vertical-align: middle;
-  font-size: $metric-medium;
-  color: $color-info;
+.img__slider {
+  width: 100%;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 .section__text--title {
-  font-size: $font-h2;
-  font-weight: $font-weight-tiny;
-  text-transform: capitalize;
+  @extend .uppercase;
+  font-size: 30px;
 }
 
 .section__text--description {
-  color: $blue-dark;
-  font-weight: $font-weight-small;
+  @extend .uppercase;
+  font-size: 12px;
 }
 
-.text__a--custom {
-  color: $blue-dark;
+.horizontal-stripes {
+  width: 100px;
+  border-top: solid 1px $gray-text;
+  position: relative;
+  top: 20px;
 }
 
-.object {
-  text-transform: capitalize;
-  margin-top: $top-small;
-  color: $blue-lighter;
+.heading {
+  font-size: $font-size-small;
+  font-weight: 600;
+}
+
+.sub-heading {
+  font-size: 12px;
 }
 
 %section-margin {
-  padding: $section-padding 0;
+  padding: $margin-section 0;
   position: relative;
+}
+
+%hover-effect {
+  -webkit-animation-name: hover-animation; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: hover-animation;
+  animation-duration: 1s;
 }

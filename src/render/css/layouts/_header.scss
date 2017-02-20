@@ -1,34 +1,51 @@
-//code here
-header {
-  margin: 0;
-  padding: 0;
+.header-top {
+  background-color: $brown;
+  color: $while;
+  @include size (100%, 230px);
+  .wrap-header-top {
+    text-align: center;
+    @extend %section-margin;
+  }
+  .header-title {
+    @extend .uppercase;
+    font-size: 5px;
+    margin: 0;
+  }
+  .main-title {
+    @extend .uppercase;
+    font-size: $font-size-medium;
+    margin: $metric-small 0;
+    font-weight: 600;
+  }
 
-  .logo__text {
-    color: $blue-dark;
-    font-size: $font-size-h1;
+  .btn-purchase {
+    background: transparent;
+    font-size: $font-size-tiny;
+    @extend .uppercase;
+    @include size(120px, 35px);
+    margin-top: $metric-large;
+    border-radius: 5px;
+    &:hover {
+      background-color: $while;
+      color: $feature-black;
+      @extend %hover-effect;
+    }
   }
 }
 
-.header-top {
-  padding: $metric-small 0 0 0;
-  color: $btn-default-border;
+.category {
+  text-transform: capitalize;
+  margin: 0 -5px
+}
 
-  .contact {
-    @extend %li-inline-none;
-    margin-right: $metric-medium;
-    span {
-      @extend %icon-style;
-    }
-  }
-  
-  .cart {
-    @extend %li-inline-none;
-    float: right;
-    span {
-      @extend %icon-style;
-      &.total {
-        font-size: $font-size-main !important;
-      }
-    }
-  }
+.text-logo {
+  font-weight: 900;
+}
+.serch-menu {
+  display: none;
+  font-size: 20px;
+}
+
+.color-thefox {
+  color: $green;
 }

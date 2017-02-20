@@ -1,19 +1,14 @@
--var listContact = [{icon: 'icon-phone_in_talk', title: ' +84 984 827 754'}, {icon: 'icon-social-skype', title: ' mr.crazykv'}]
 header
-  div.container
-    ul.header-top
-      li.contact
-        img(src="images/letter-icon.png", alt="letter icon") 
-        |tranmautritam.com
-      each item in listContact
-        li.contact
-          span(class='#{item.icon}')
-          = item.title
-      li.cart 
-        span.icon-shopping-cart 
-        |Cart [
-        span.total 0
-        |]item
+  .header-top
+    .container
+      .wrap-header-top
+        p.header-title the best for magazine style
+        h2.main-title do you like 
+          span.color-thefox thefox 
+          | mag
+        p.header-title yeah, i know you like so much, so please buy and try it now
+        button.btn-purchase purchase now
+  // navigation
   nav.navbar.navbar-default
     .container
       // Brand and toggle get grouped for better mobile display
@@ -23,42 +18,21 @@ header
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        h1 
-          a.navbar-brand.logo__text(href='javascript: void(0);') adel
-            strong fox
+        a.navbar-brand(href='javascript: void(0);') the
+          span.text-logo fox
       // Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        ul.nav.navbar-nav
-          each item in ['home', 'pages', 'portfilio', 'shop', 'blog', 'shortcodes']
-            li.nav__category
-              a(href='javascript: void(0);')= item
-                span.icon-expand_more
-          li.dropdown.nav__category
-            a.dropdown-toggle(href='javascript: void(0);', data-toggle='dropdown')
-              | feature 
-              span.icon-expand_more
-            .dropdown-menu.group-menu(aria-labelledby='dropdownMenuButton')
-              .row
-                .col-md-6
-                  ul.sub-level2
-                    p layer slider banner
-                    each _ in Array(4)
-                      li.list-circle
-                        a(href='javascript: void(0);')= 'sub menu level 2'
-                .col-md-6
-                  ul.sub-level2
-                    p feature 2
-                    //- array print 4 li tag
-                    each _ in Array(4) 
-                      li.list-circle
-                        a(href='javascript: void(0);')= 'sub menu level 2'
-          li.nav__category
-            a.search_sm(href='javascript: void(0);')= item
-              span.icon-search
-          each contact in ['tranmautritam.com', '+84 984 827 754', 'mr.crazykv']
-            li.nav__category.contact__sm
-              a(href='javascript: void(0);')= contact
-          li.nav__category
-            input#exampleInputSearch.form-control(type='search', placeholder='Search')
-      // /.navbar-collapse
-    // /.container-fluid
+        ul.nav.navbar-nav.navbar-right
+          li.active
+            a.category.color-active(href='javascript: void(0);')
+              | home
+              span.sr-only (current)
+          each menu in ['page', 'portfolio', 'blog', 'shop', 'travel', 'shortcodes', 'features', 'contact']    
+            li
+              a.category(href='javascript: void(0);')= menu
+          li
+            a.category(href='javascript: void(0);')
+              input#exampleInputSearch.form-control(type='text', placeholder='Search')
+              span.icon-search.serch-menu
+    // /.navbar-collapse
+  // /.container-fluid
